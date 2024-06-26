@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+TAS:wght@100..400&family=Playwrite+MX:wght@100..400&display=swap');
+.welcome-page{
+  margin-top:0;
+  /* backdrop-filter: blur(50px); */
+}
+.welcome-container {
+    margin: 5rem auto;
+    width: 65%;
+    text-align: center;
+    padding: 3rem 3rem;
+    /* border: 2px solid var(--outline); */
+    /* background-color: white; */
+    background-color:rgb(255, 243, 212, 0.95);
+     /* rgb(255, 243, 212, 0.95); rgb(153, 102, 49,0.9);rgb(255, 225, 189,0.95);White color with 80% opacity */
+    border-radius: 1rem;
+    height:20%;
+    margin-bottom: 5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  
+  }
+  
+  .welcome-container img{
+    width:50%;
+    height: 80%;
+  }
+  
+  /* This targets any h1 that is a child of an element with the .welcome-container class */
+  .welcome-container > h1 {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Playwrite IT Moderna', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+
+  }
+  
+  .welcome-container > h3 {
+    font-family:'Playwrite AU TAS', sans-serif;
+    font-weight: bold;
+  }
+
+  /* This targets any div that is a child of an element with the .welcome-container class */
+  .welcome-container > div {
+    font-style: italic;
+  }
+
+  .we-get-it-container {
+    margin: 5rem auto;
+    width: 100%;
+    text-align: center;
+    padding: 3rem 3rem;
+    /* border: 1px solid var(--outline); */
+    /* background-color: white; */
+    background-color: rgba(251, 240, 209, 0.4); /* White color with 80% opacity */
+    /* rgb(255, 217, 150, 0.85); rgb(202, 171, 148*/
+    /* border-radius: 0.5rem; */
+    height:20%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    
+  }
+
+  .we-get-it-container img{
+    
+    width:50%;
+    height: 80%;
+    margin-bottom: 2.5rem ;
+  }
+
+  .we-get-it-container > h3 {
+    font-family:'Playwrite IT Moderna', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .about-container {
+    margin: 5rem auto;
+    width: 80%;
+    text-align: center;
+    padding: 3rem 3rem;
+    /* border: 1px solid var(--outline); */
+    /* background-color: white; */
+    background-color: rgba(234, 251, 233, 0.85); /* White color with 80% opacity */
+    /* border-radius: 0.5rem; */
+    height:20%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    border-radius: 1rem;
+    
+  }
+/* About Us */
+  .about-container > h2 {
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Playwrite IT Moderna', sans-serif;
+    font-weight: bold;
+    font-size: 3.2em;
+  }
+  .about-container > h4 {
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Playwrite IT Moderna', sans-serif;
+    font-size: 1.5em;
+    text-align: start;
+    margin-bottom: 40px;
+    line-height: 1.6; /* Adjust line-height to increase space between lines */
+ 
+  }
+  .about-container > h3 {
+    display: flex;
+    flex-direction: flex-start;
+    font-family: 'Playwrite IT Moderna', sans-serif;
+    font-size: 3em;
+    margin-bottom: 1rem ;
+    
+  
+  }
+  
+  

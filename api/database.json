@@ -1,0 +1,457 @@
+{
+  "owners": [
+    {
+      "id": 1,
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "userId": 3
+    },
+    {
+      "id": 4,
+      "userId": 4
+    },
+    {
+      "id": 5,
+      "userId": 5
+    },
+    {
+      "id": 6,
+      "userId": 6
+    },
+    {
+      "id": 7,
+      "userId": 7
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Fiona Wee",
+      "phoneNumber": "30412301234",
+      "email": "fiona@gmail.com",
+      "city": "Huntington",
+      "state": "West Virginia",
+      "photo": "https://cdn.trustedhousesitters.com/static/fcaf029f54b3931239f1.jpg",
+      "isOwner": true
+    },
+    {
+      "id": 2,
+      "fullName": "Justin Hall",
+      "phoneNumber": "3041233344",
+      "email": "justin@gmail.com",
+      "city": "San Diego",
+      "state": "California",
+      "photo": "https://static1.srcdn.com/wordpress/wp-content/uploads/2022/08/Alexis-Justin-MAFS-s15.png",
+      "isOwner": true
+    },
+    {
+      "id": 3,
+      "fullName": "Corey Haselmayer",
+      "phoneNumber": "3151230882",
+      "email": "corey@gmail.com",
+      "city": "Syracuse",
+      "state": "New York",
+      "photo": "https://lfs-ps-2023.sites.olt.ubc.ca/files/2018/04/will-valley-square-crop-300x300.jpg",
+      "isOwner": true
+    },
+    {
+      "id": 4,
+      "fullName": "Marley Smith",
+      "phoneNumber": "3041233565",
+      "email": "marley@gmail.com",
+      "city": "Chesapeake",
+      "state": "Ohio",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXndnx-qRpoPKKuqYZG8H7EzNkTm4kcXAViookNNEvScFkjrvdyZRiEFANkgz-nh6DH18&usqp=CAU",
+      "isOwner": true
+    },
+    {
+      "id": 5,
+      "fullName": "Caitlynn Taylor",
+      "phoneNumber": "3041234422",
+      "email": "caitlynn@gmail.com",
+      "city": "Olive Hill",
+      "state": "Kentucky",
+      "photo": "https://i.pinimg.com/originals/98/0f/bc/980fbc59de09189cf4c519a8f8386b2f.jpg",
+      "isOwner": true
+    },
+    {
+      "id": 6,
+      "fullName": "Michelle Marlowe",
+      "phoneNumber": "3151236682",
+      "email": "michelle@gmail.com",
+      "city": "South Point",
+      "state": "Ohio",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7IRRh9RfOSWkDCcrxXczap9V-zwv6t1dbvg&s",
+      "isOwner": true
+    },
+    {
+      "id": 7,
+      "fullName": "Kristie Pereira",
+      "phoneNumber": "3011235581",
+      "email": "kristie@gmail.com",
+      "city": "Derwood",
+      "state": "Maryland",
+      "isOwner": true
+    },
+    {
+      "id": 8,
+      "fullName": "John Doe",
+      "phoneNumber": "1234567890",
+      "email": "john.doe@gmail.com",
+      "city": "New York City",
+      "state": "New York",
+      "photo": "",
+      "isOwner": false
+    },
+    {
+      "id": 9,
+      "fullName": "Jane Smith",
+      "phoneNumber": "2345678901",
+      "email": "jane.smith@gmail.com",
+      "city": "Los Angeles",
+      "state": "California",
+      "photo": "",
+      "isOwner": false
+    },
+    {
+      "id": 10,
+      "fullName": "Michael Johnson",
+      "phoneNumber": "3456789012",
+      "email": "michael.johnson@gmail.com",
+      "city": "Chicago",
+      "state": "Illinois",
+      "photo": "",
+      "isOwner": false
+    },
+    {
+      "id": 11,
+      "fullName": "Emma Brown",
+      "phoneNumber": "4567890123",
+      "email": "emma.brown@gmail.com",
+      "city": "Houston",
+      "state": "Texas",
+      "photo": "",
+      "isOwner": false
+    },
+    {
+      "id": 12,
+      "fullName": "David Wilson",
+      "phoneNumber": "5678901234",
+      "email": "david.wilson@gmail.com",
+      "city": "Phoenix",
+      "state": "Arizona",
+      "photo": "",
+      "isOwner": false
+    },
+    {
+      "id": 13,
+      "fullName": "Sarah Martinez",
+      "phoneNumber": "6789012345",
+      "email": "sarah.martinez@gmail.com",
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "photo": "",
+      "isOwner": false
+    },
+    {
+      "id": 14,
+      "fullName": "James Anderson",
+      "phoneNumber": "7890123456",
+      "email": "james.anderson@gmail.com",
+      "city": "San Antonio",
+      "state": "Texas",
+      "photo": "",
+      "isOwner": false
+    },
+    {
+      "id": 15,
+      "fullName": "Jennifer Taylor",
+      "phoneNumber": "8901234567",
+      "email": "jennifer.taylor@gmail.com",
+      "city": "San Francisco",
+      "state": "California",
+      "photo": "",
+      "isOwner": false
+    },
+    {
+      "id": 16,
+      "fullName": "Daniel Garcia",
+      "phoneNumber": "9012345678",
+      "email": "daniel.garcia@gmail.com",
+      "city": "Dallas",
+      "state": "Texas",
+      "photo": "",
+      "isOwner": false
+    },
+    {
+      "id": 17,
+      "fullName": "Mary Rodriguez",
+      "phoneNumber": "0123456789",
+      "email": "mary.rodriguez@gmail.com",
+      "city": "Austin",
+      "state": "Texas",
+      "photo": "",
+      "isOwner": false
+    }
+  ],
+  "adopters": [
+    {
+      "id": 1,
+      "userId": 8
+    },
+    {
+      "id": 2,
+      "userId": 9
+    },
+    {
+      "id": 3,
+      "userId": 10
+    },
+    {
+      "id": 4,
+      "userId": 11
+    },
+    {
+      "id": 5,
+      "userId": 12
+    },
+    {
+      "id": 6,
+      "userId": 13
+    },
+    {
+      "id": 7,
+      "userId": 14
+    },
+    {
+      "id": 8,
+      "userId": 15
+    },
+    {
+      "id": 9,
+      "userId": 16
+    },
+    {
+      "id": 10,
+      "userId": 17
+    }
+  ],
+  "petPosts": [
+    {
+      "id": 1,
+      "name": "Kitty",
+      "age": "6",
+      "species": "cat",
+      "breed": "domestic shorthair",
+      "medicalCondition": "stomatitis",
+      "behavioralIssues": "none",
+      "reasonForRehoming": "Cant afford vet bills.",
+      "ownerId": 1,
+      "photo": "./images/Kitty2024.jpg",
+      "timestamp": "2024-04-28T02:00:54.808Z",
+      "ownersPets": [
+        {
+          "id": 1,
+          "ownerId": 1,
+          "petPostId": 1
+        }
+      ],
+      "ageUnit": "years"
+    },
+    {
+      "id": 2,
+      "name": "Bunny",
+      "age": "5",
+      "species": "rabbit",
+      "breed": "flemish giant",
+      "medicalCondition": "none",
+      "behavioralIssues": "nipping",
+      "reasonForRehoming": "Excessive nipping behavior",
+      "ownerId": 1,
+      "photo": "https://preview.redd.it/yk9tokr56a6c1.jpg?auto=webp&s=44d07ca8c888d1e26a9ebb7aab020e969fba2b63",
+      "timestamp": "2024-03-13T02:00:54.808Z",
+      "ownersPets": [
+        {
+          "id": 2,
+          "ownerId": 1,
+          "petPostId": 2
+        }
+      ],
+      "ageUnit": "months"
+    },
+    {
+      "id": 3,
+      "name": "Mya",
+      "age": "7",
+      "species": "dog",
+      "breed": "unknown",
+      "medicalCondition": "none",
+      "behavioralIssues": "bites other dogs",
+      "reasonForRehoming": "My dog bit my wife's dog",
+      "ownerId": 2,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW3CVq-2rG9WYKxE0OE1rt69p3RYOJj9acUQ&s",
+      "timestamp": "2024-03-02T01:59:22.245Z",
+      "ownersPets": [
+        {
+          "id": 3,
+          "ownerId": 2,
+          "petPostId": 3
+        }
+      ],
+      "ageUnit": "years"
+    },
+    {
+      "id": 4,
+      "name": "Lilly",
+      "age": "5",
+      "species": "dog",
+      "breed": "corgi",
+      "medicalCondition": "none",
+      "behavioralIssues": "keeps pooping inside the house",
+      "reasonForRehoming": "My dog cant figure out how to use the bathroom outside",
+      "ownerId": 3,
+      "photo": "https://images.craigslist.org/00u0u_kL510HM0Scz_0t20CI_600x450.jpg",
+      "timestamp": "2024-02-11T01:59:22.245Z",
+      "ownersPets": [
+        {
+          "id": 4,
+          "ownerId": 3,
+          "petPostId": 4
+        }
+      ],
+      "ageUnit": "years"
+    },
+    {
+      "id": 5,
+      "name": "Piggy",
+      "age": "2",
+      "species": "pig",
+      "breed": "micro pig",
+      "medicalCondition": "none",
+      "behavioralIssues": "none",
+      "reasonForRehoming": "I regret my decision",
+      "ownerId": 4,
+      "photo": "https://s.abcnews.com/images/Lifestyle/AP_micro_pigs_10_sr_140319_1x1_1600.jpg?w=1600",
+      "timestamp": "2024-02-04T02:00:54.808Z",
+      "ownersPets": [
+        {
+          "id": 5,
+          "ownerId": 4,
+          "petPostId": 5
+        }
+      ],
+      "ageUnit": "months"
+    },
+    {
+      "id": 6,
+      "name": "Daisy",
+      "age": "4",
+      "species": "cow",
+      "breed": "highland cattle",
+      "medicalCondition": "none",
+      "behavioralIssues": "cow keeps breaking into the house",
+      "reasonForRehoming": "My cow is trying to be an indoor cow",
+      "ownerId": 5,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRluZKdvYN_XBCw0QiVX7T7vSLkOBMkW0ODmdzDMW16vLQ7F5LGS5t-B0TyKOmD_j0KqlM&usqp=CAU",
+      "timestamp": "2024-02-03T02:00:54.808Z",
+      "ownersPets": [
+        {
+          "id": 6,
+          "ownerId": 5,
+          "petPostId": 6
+        }
+      ],
+      "ageUnit": "years"
+    },
+    {
+      "id": 7,
+      "name": "Lilly",
+      "age": "10",
+      "species": "dog",
+      "breed": "Miniature Schnauzer",
+      "medicalCondition": "none",
+      "behavioralIssues": "will not stop barking",
+      "reasonForRehoming": "she can't shut up",
+      "ownerId": 6,
+      "photo": "https://www.rvc.ac.uk/Media/Default/VetCompass/images/miniature-schanuzer-outside.jpg",
+      "timestamp": "2024-01-30T02:00:54.808Z",
+      "ownersPets": [
+        {
+          "ownerId": 6,
+          "petPostId": 7,
+          "id": 7
+        }
+      ],
+      "ageUnit": "years"
+    },
+    {
+      "id": 8,
+      "name": "Beau",
+      "age": "2",
+      "species": "dog",
+      "breed": "Hound Mix",
+      "medicalCondition": "none",
+      "behavioralIssues": "none",
+      "reasonForRehoming": "Costly, risky surgery required, hesitant to proceed",
+      "ownerId": 5,
+      "photo": "https://sl-prod-v2-cdn.shelterluv.com/sites/default/files/animal_pics/6954/2024/04/19/10/20240419102407.png",
+      "timestamp": "2024-01-01T02:00:54.808Z",
+      "ownersPets": [
+        {
+          "ownerId": 7,
+          "petPostId": 8,
+          "id": 8
+        }
+      ],
+      "ageUnit": "years"
+    }
+  ],
+  "ownersPets": [
+    {
+      "id": 1,
+      "ownerId": 1,
+      "petPostId": 1
+    },
+    {
+      "id": 2,
+      "ownerId": 1,
+      "petPostId": 2
+    },
+    {
+      "id": 3,
+      "ownerId": 2,
+      "petPostId": 3
+    },
+    {
+      "id": 4,
+      "ownerId": 3,
+      "petPostId": 4
+    },
+    {
+      "id": 5,
+      "ownerId": 4,
+      "petPostId": 5
+    },
+    {
+      "id": 6,
+      "ownerId": 5,
+      "petPostId": 6
+    },
+    {
+      "ownerId": 6,
+      "petPostId": 7,
+      "id": 7
+    },
+    {
+      "ownerId": 7,
+      "petPostId": 8,
+      "id": 8
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+/* MyPosts.css */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+.header {
+  font-family: 'Playwrite IT Moderna', sans-serif;
+  text-align: center;
+  /*font-size: 2.5rem;
+  color: #fff7f0; */
+    font-size: 2.5rem;
+  font-weight: bolder;
+  margin-bottom: 1.5rem;
+  color: rgb(50, 40, 40);
+   /* text-shadow:  */
+   /* 0 0 8px rgba(0, 0, 0, 0.5), Small shadow for a slight glow effect */
+    /* 0 0 6px rgba(0, 0, 0, 0.8), Medium shadow for depth */
+    /* 0 0 10px rgba(0, 0, 0, 1); Larger shadow for more emphasis */
+  /* -webkit-text-stroke: 0.5px black; 
+  -webkit-text-fill-color: #fff7f0;  */
+}
+
+.article-list-item h2{
+  font-weight: bolder;
+}
+
+
+/* Container for MyPosts */
+.article-lists-container {
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    padding: 20px; /* Add padding for better spacing */
+  }
+  
+  .article-list-container {
+    width: 50%;
+   
+  }
+  
+  .article {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: space-around; /* Center-align items with space around them */
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  /* Individual article card */
+  .article-list-item {
+    margin-bottom: 5rem;
+    background-color: rgb(255, 248, 240, 0.95); /* Light blue background */
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Soft shadow */
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  } 
+
+  .photo-and-info{
+    margin-left: 30px;
+  }
+
+  .photo-and-info info{
+    margin-left: 30px;
+  }
+
+  /* .photo:hover {
+      transform: scale(1.1); /* Scale up slightly on hover */
+  /* } */ */
+  
+  .article-list-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    
+  }
+  
+
+  /* Information sections inside article card */
+  .article-list-item p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-family: 'Playwrite IT Moderna', sans-serif;
+
+  }
+  .article-list-item:hover {
+  transform: scale(1.1);}
+ 
+  .pet-name{
+    font-family: 'Playwrite IT Moderna', sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+    
+  }
+  /* Image inside article card */
+  .article-list-item img {
+    /* width: calc(20% - 20px); */
+    height: 20rem; /* Ensure the image fills its container */
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5)
+  }
+  
+  /* Buttons inside article card */
+  .article-list-item button {
+    margin-top: 10px;
+    margin-right: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* margin:0 auto; */
+
+  }
+  
+
+
+  .article-list-item button:hover {
+    transform: translateY(-2px); /* Move button slightly up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow on hover */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 2000px) {
+    .article-list-item {
+      width: calc(100% - 20px); /* Two cards per row on medium screens */
+    }
+  }
+  
+  

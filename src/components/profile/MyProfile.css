@@ -1,0 +1,90 @@
+/* Import a sleek font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+
+.profile-container {
+  font-family: 'Roboto', sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: rgb(220, 242, 206,0.9);
+  /* rgb(194, 217, 173, 0.9)*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
+  border-radius: 8px;
+  text-align: center;
+  height: auto;
+}
+
+.profile-container h1{
+  font-family: 'Playwrite IT Moderna', sans-serif;
+  font-weight: bolder;
+    font-size: 2rem;
+}
+
+.profile-title {
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.profile-photo-container {
+  margin-top:10px;
+  margin-bottom: 20px;
+}
+
+.user-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.profile-details p {
+  font-size: 1.4em;
+  color: #666;
+  margin: 10px 0;
+  margin-bottom: 6px;
+}
+
+.profile-details strong {
+  color: #333;
+}
+
+.profile-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.profile-buttons .btn-warning {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.profile-buttons .btn-danger {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.profile-buttons .btn-warning:hover,
+.profile-buttons .btn-danger:hover {
+  opacity: 0.8;
+}
+
+
+
+/* backdrop-filter: blur(10px); Frosted glass effect */
+/* background: url('https://example.com/path-to-your-image.jpg') no-repeat center center fixed; Replace with your image URL */
+  /* background-size: cover; */
+
+  /* background: var(--appBackground); */
+    /* background-size: cover; Ensure background covers the element */
+    /* background-repeat: no-repeat; Prevent background from repeating */
+    /* backdrop-filter: blur(50px); Apply blur effect */

@@ -1,0 +1,121 @@
+/* PetPosts.css */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+h2{
+    font-family: 'Playwrite IT Moderna', sans-serif;
+    font-weight: bolder;
+    font-size: 5rem;
+}
+
+.App{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+}
+
+/* Individual pet post card */
+.pet-card {
+  width: calc(20% - 20px); /* Adjust card width based on desired layout */
+  margin-bottom: 5rem;
+  background-color: rgb(255, 248, 240, 0.95); /* Light blue background */
+  /* #FAF4E1 rgb(255, 235, 235,0.95) rgb(240, 227, 211)*/
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Soft shadow */
+  transition: box-shadow 0.3s ease;
+  justify-content: space-evenly;
+  margin-right: 30px;
+}
+
+.pet-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    transform: scale(1.1); /* Scale up slightly on hover */
+
+}
+
+/* Header inside pet card */
+.pet-card .petPost-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.pet-card .pet-photo {
+  width: 50%;
+  height: 50%; /* Ensure the image fills its container */
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+
+/* Information sections inside pet card */
+.pet-card .petPost-info {
+  margin-bottom: 5px;
+}
+
+/* Image inside pet card */
+.pet-card .pet-photo {
+  width: 100%;
+  height: 20rem;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Buttons inside pet card */
+.pet-card button {
+  margin-top: 10px;
+  margin-right: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pet-card button:hover {
+  transform: translateY(-2px); /* Move button slightly up on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow on hover */
+}
+
+/* Modal styles */
+.modal-dialog {
+  max-width: 600px; /* Adjust modal width as needed */
+}
+
+
+/* .petPost-list {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+} */
+
+/* Container for pet posts */
+.petPosts-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Wrap items to the next line */
+  justify-content: space-around;/*  Center-align items with space around them */
+  padding: 20px;/*  Add padding for better spacing */
+ } 
+
+.pet-post{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  justify-content: space-around;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 20px; 
+}
+
+/* .petPosts-container h2{
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: rem;
+} */
+
+.petPosts-container h2{
+    font-family: 'Playwrite IT Moderna', sans-serif;
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+.petPost-header{
+  font-family: 'Playwrite IT Moderna', sans-serif;
+}

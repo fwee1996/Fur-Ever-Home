@@ -1,0 +1,63 @@
+/* Import a sleek font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+
+.main-container{
+  height:800px;
+}
+.owner-details-container {
+  font-family: 'Roboto', sans-serif;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  /* padding: 40px; */
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  /* border-radius: 8px;
+  text-align: center; */
+  /* backdrop-filter: blur(10px); Frosted glass effect */
+  margin-top: 5rem;
+  margin-bottom: 10px;
+  padding: 20px;
+  background-color: rgb(220, 242, 206,0.9);
+  /* rgb(194, 217, 173, 0.9)*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
+  border-radius: 8px;
+  text-align: center;
+  /* height: auto; */
+}
+
+.owner-details-container h2{
+  font-family: 'Playwrite IT Moderna', sans-serif;
+  font-weight: bolder;
+    font-size: 2rem;
+}
+
+.owner-info {
+  margin-top: 20px;
+}
+
+.owner-details-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top:10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.owner-info p {
+  /* font-size: 1.2em;
+  color: #666;
+  margin: 10px 0; */
+  font-size: 1.4em;
+  color: #666;
+  margin: 10px 0;
+  margin-bottom: 6px;
+}
+
+.owner-info strong {
+  color: #333;
+}

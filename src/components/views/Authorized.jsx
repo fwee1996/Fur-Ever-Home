@@ -1,0 +1,16 @@
+//This Works:
+import React from "react";
+import { Navigate, useLocation } from "react-router-dom";
+
+export const Authorized = ({ children }) => {
+  let location = useLocation();
+  const user = localStorage.getItem("furEverHome_user");
+
+  // Check if user is logged in. If they are, parse the user and render the child components
+  if (user) {
+    const currentUser = JSON.parse(user);
+    return React.cloneElement(children, { currentUser });
+  } else {
+    return <Navigate to="/login" />;
+  }
+};
