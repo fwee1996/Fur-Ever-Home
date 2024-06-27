@@ -30,12 +30,13 @@
   .pet-details-photo {
     width: 100%;
     max-width: 300px;
-    /* height: auto; */
     border-radius: 8px;
     /* margin-bottom: 10px; */
     margin-right: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-
+    height: auto; /* Ensure image is not hidden */
+    border-radius: 8px;
+    margin-top: 10px;
   }
   
   .info {

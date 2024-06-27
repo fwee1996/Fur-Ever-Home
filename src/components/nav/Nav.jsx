@@ -209,69 +209,692 @@
 
 
 
-import { Link, useNavigate } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import "./NavBar.css"
+// import { Link, useNavigate } from "react-router-dom";
+// import Button from 'react-bootstrap/Button';
+// import Container from 'react-bootstrap/Container';
+// import Form from 'react-bootstrap/Form';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
+// import Offcanvas from 'react-bootstrap/Offcanvas';
+// import "./NavBar.css"
+
+// export const NavigationBar = () => {
+//   const navigate = useNavigate();
+
+//   const handleLogout = () => {
+//     localStorage.removeItem("furEverHome_user");
+//     navigate("/", { replace: true });
+//   };
+
+//   const isLoggedIn = localStorage.getItem("furEverHome_user");
+
+//   return (
+//     <Navbar expand="false" className="navbar-custom bg-body-tertiary mb-3">
+//       <Container fluid>
+//         <Navbar.Brand href="/">
+//           <img
+//             src="./images/Logo1.png"
+//             width="250"
+//             height="50"
+//             alt="Fur-Ever-Home Logo"
+//           />
+//         </Navbar.Brand>
+//         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand`} />
+//         <Navbar.Offcanvas
+//           id={`offcanvasNavbar-expand`}
+//           aria-labelledby={`offcanvasNavbarLabel-expand`}
+//           placement="end"
+//         >
+//           <Offcanvas.Header closeButton>
+//             <Offcanvas.Title id={`offcanvasNavbarLabel-expand`}>
+//               Fur-Ever-Home
+//             </Offcanvas.Title>
+//           </Offcanvas.Header>
+
+//           <Offcanvas.Body>
+//             <Nav className="justify-content-end flex-grow-1 pe-3">
+//               <Nav.Link href="/" className="active">Home</Nav.Link>
+//               <Nav.Link href="/availablePets">Available Pets</Nav.Link>
+//               <Nav.Link href="/postAPet">Post a Pet</Nav.Link>
+//               {isLoggedIn ? (
+//                 <>
+//                   <Nav.Link href="/myPosts">My Posts</Nav.Link>
+//                   <Nav.Link href="/myProfile">My Profile</Nav.Link>
+//                   <Nav.Link href="/" onClick={handleLogout}>Logout</Nav.Link>
+//                 </>
+//               ) : (
+//                 <Nav.Link href="/login">Login</Nav.Link>
+//               )}
+//             </Nav>
+//           </Offcanvas.Body>
+//         </Navbar.Offcanvas>
+//       </Container>
+//     </Navbar>
+//   );
+// }
+
+// export default NavigationBar;
+
+
+
+
+
+
+
+
+//This works and nav bar is pink--offcanvas still white tho---
+// import { Link, useNavigate } from "react-router-dom";
+// import Button from 'react-bootstrap/Button';
+// import Container from 'react-bootstrap/Container';
+// import Form from 'react-bootstrap/Form';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
+// import Offcanvas from 'react-bootstrap/Offcanvas';
+// import "./NavBar.css"
+
+// export const NavigationBar = () => {
+//   const navigate = useNavigate();
+
+//   const handleLogout = () => {
+//     localStorage.removeItem("furEverHome_user");
+//     navigate("/", { replace: true });
+//   };
+
+//   const isLoggedIn = localStorage.getItem("furEverHome_user");
+
+//   return (
+//     <Navbar expand="false" className="navbar-custom mb-3">
+//       <Container fluid>
+//         <Navbar.Brand href="/">
+//           <img
+//             src="./images/Logo1.png"
+//             width="250"
+//             height="50"
+//             alt="Fur-Ever-Home Logo"
+//           />
+//         </Navbar.Brand>
+//         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand`} />
+//         <Navbar.Offcanvas
+//           id={`offcanvasNavbar-expand`}
+//           aria-labelledby={`offcanvasNavbarLabel-expand`}
+//           placement="end"
+//         >
+//           <Offcanvas.Header closeButton>
+//             <Offcanvas.Title id={`offcanvasNavbarLabel-expand`}>
+//               Fur-Ever-Home
+//             </Offcanvas.Title>
+//           </Offcanvas.Header>
+
+//           <Offcanvas.Body>
+//             <Nav className="justify-content-end flex-grow-1 pe-3">
+//               <Nav.Link href="/" className="nav-link-home active">Home</Nav.Link>
+//               <Nav.Link href="/availablePets" className="nav-link-available-pets">Available Pets</Nav.Link>
+//               <Nav.Link href="/postAPet" className="nav-link-post-pet">Post a Pet</Nav.Link>
+//               {isLoggedIn ? (
+//                 <>
+//                   <Nav.Link href="/myPosts" className="nav-link-my-posts">My Posts</Nav.Link>
+//                   <Nav.Link href="/myProfile" className="nav-link-my-profile">My Profile</Nav.Link>
+//                   <Nav.Link href="/" onClick={handleLogout} className="nav-link-logout">Logout</Nav.Link>
+//                 </>
+//               ) : (
+//                 <Nav.Link href="/login" className="nav-link-login">Login</Nav.Link>
+//               )}
+//             </Nav>
+//           </Offcanvas.Body>
+//         </Navbar.Offcanvas>
+//       </Container>
+//     </Navbar>
+//   );
+// }
+
+// export default NavigationBar;
+
+
+
+
+
+
+
+
+// import { Link, useNavigate } from "react-router-dom";
+// import Button from 'react-bootstrap/Button';
+// import Container from 'react-bootstrap/Container';
+// import Form from 'react-bootstrap/Form';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
+// import Offcanvas from 'react-bootstrap/Offcanvas';
+// import "./NavBar.css"
+
+// export const NavigationBar = () => {
+//   const navigate = useNavigate();
+
+//   const handleLogout = () => {
+//     localStorage.removeItem("furEverHome_user");
+//     navigate("/", { replace: true });
+//   };
+
+//   const isLoggedIn = localStorage.getItem("furEverHome_user");
+
+//   return (
+//     <Navbar expand="false" className="navbar-custom mb-3">
+//       <Container fluid>
+//         <Navbar.Brand href="/">
+//           <img
+//             src="./images/Logo1.png"
+//             width="250"
+//             height="50"
+//             alt="Fur-Ever-Home Logo"
+//           />
+//         </Navbar.Brand>
+//         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand`} />
+//         <Navbar.Offcanvas
+//           id={`offcanvasNavbar-expand`}
+//           aria-labelledby={`offcanvasNavbarLabel-expand`}
+//           placement="end"
+//         >
+//           <Offcanvas.Header closeButton>
+//             <Offcanvas.Title id={`offcanvasNavbarLabel-expand`}>
+//             <img
+//             src="./images/Logo1.png"
+//             width="280"
+//             height="60"
+//             alt="Fur-Ever-Home Logo"
+//           />
+//             </Offcanvas.Title>
+//           </Offcanvas.Header>
+
+//           <Offcanvas.Body>
+//             <Nav className="justify-content-end flex-grow-1 pe-3 navbar-offcanvas">
+//               <Nav.Link href="/" className="nav-link-custom active">Home</Nav.Link>
+//               <Nav.Link href="/availablePets" className="nav-link-custom">Available Pets</Nav.Link>
+//               <Nav.Link href="/postAPet" className="nav-link-custom">Post a Pet</Nav.Link>
+//               {isLoggedIn ? (
+//                 <>
+//                   <Nav.Link href="/myPosts" className="nav-link-custom">My Posts</Nav.Link>
+//                   <Nav.Link href="/myProfile" className="nav-link-custom">My Profile</Nav.Link>
+//                   <Nav.Link href="/" onClick={handleLogout} className="nav-link-custom">Logout</Nav.Link>
+//                 </>
+//               ) : (
+//                 <Nav.Link href="/login" className="nav-link-custom">Login</Nav.Link>
+//               )}
+//             </Nav>
+//           </Offcanvas.Body>
+//         </Navbar.Offcanvas>
+//       </Container>
+//     </Navbar>
+//   );
+// }
+
+// export default NavigationBar;
+
+
+
+
+
+//This works w/o highlight on selected page on offcanvas!!
+// import { Link, useNavigate } from "react-router-dom";
+// import Button from 'react-bootstrap/Button';
+// import Container from 'react-bootstrap/Container';
+// import Form from 'react-bootstrap/Form';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
+// import Offcanvas from 'react-bootstrap/Offcanvas';
+// import "./NavBar.css"; // Import your CSS file
+
+// export const NavigationBar = () => {
+//   const navigate = useNavigate();
+
+//   const handleLogout = () => {
+//     localStorage.removeItem("furEverHome_user");
+//     navigate("/", { replace: true });
+//   };
+
+//   const isLoggedIn = localStorage.getItem("furEverHome_user");
+
+//   return (
+//     <Navbar expand="false" className="navbar-custom mb-3">
+//       <Container fluid>
+//         <Navbar.Brand href="/">
+//           <img
+//             src="./images/Logo1.png"
+//             width="250"
+//             height="50"
+//             alt="Fur-Ever-Home Logo"
+//           />
+//         </Navbar.Brand>
+//         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand`} />
+//         <Navbar.Offcanvas
+//           id={`offcanvasNavbar-expand`}
+//           aria-labelledby={`offcanvasNavbarLabel-expand`}
+//           placement="end"
+//         >
+//           <Offcanvas.Header closeButton>
+//             <Offcanvas.Title id={`offcanvasNavbarLabel-expand`}>
+//               <img
+//                 src="./images/Logo1.png"
+//                 width="280"
+//                 height="60"
+//                 alt="Fur-Ever-Home Logo"
+//               />
+//             </Offcanvas.Title>
+//           </Offcanvas.Header>
+
+//           <Offcanvas.Body>
+//             <Nav className="justify-content-end flex-grow-1 pe-3 navbar-offcanvas">
+//               <Nav.Link href="/" className="nav-link-custom active">Home</Nav.Link>
+//               <Nav.Link href="/availablePets" className="nav-link-custom">Available Pets</Nav.Link>
+//               <Nav.Link href="/postAPet" className="nav-link-custom">Post a Pet</Nav.Link>
+//               {isLoggedIn ? (
+//                 <>
+//                   <Nav.Link href="/myPosts" className="nav-link-custom">My Posts</Nav.Link>
+//                   <Nav.Link href="/myProfile" className="nav-link-custom">My Profile</Nav.Link>
+//                   <Nav.Link href="/" onClick={handleLogout} className="nav-link-custom">Logout</Nav.Link>
+//                 </>
+//               ) : (
+//                 <Nav.Link href="/login" className="nav-link-custom">Login</Nav.Link>
+//               )}
+//             </Nav>
+//           </Offcanvas.Body>
+//         </Navbar.Offcanvas>
+//       </Container>
+//     </Navbar>
+//   );
+// }
+
+// export default NavigationBar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { Link, useNavigate, useLocation } from "react-router-dom";
+// import Button from 'react-bootstrap/Button';
+// import Container from 'react-bootstrap/Container';
+// import Form from 'react-bootstrap/Form';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
+// import Offcanvas from 'react-bootstrap/Offcanvas';
+// import "./NavBar.css"; // Import your CSS file
+
+// export const NavigationBar = () => {
+//   const navigate = useNavigate();
+//   const location = useLocation(); // Get current location pathname
+
+//   const handleLogout = () => {
+//     localStorage.removeItem("furEverHome_user");
+//     navigate("/", { replace: true });
+//   };
+
+//   const isLoggedIn = localStorage.getItem("furEverHome_user");
+
+//   // Function to determine if a link is active
+//   const isLinkActive = (href) => {
+//     // Check if the current pathname matches the href
+//     return location.pathname === href;
+//   };
+
+//   return (
+//     <Navbar expand="false" className="navbar-custom mb-3">
+//       <Container fluid>
+//         <Navbar.Brand href="/">
+//           <img
+//             src="./images/Logo1.png"
+//             width="250"
+//             height="50"
+//             alt="Fur-Ever-Home Logo"
+//           />
+//         </Navbar.Brand>
+//         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand`} />
+//         <Navbar.Offcanvas
+//           id={`offcanvasNavbar-expand`}
+//           aria-labelledby={`offcanvasNavbarLabel-expand`}
+//           placement="end"
+//         >
+//           <Offcanvas.Header closeButton>
+//             <Offcanvas.Title id={`offcanvasNavbarLabel-expand`}>
+//               <img
+//                 src="./images/Logo1.png"
+//                 width="280"
+//                 height="60"
+//                 alt="Fur-Ever-Home Logo"
+//               />
+//             </Offcanvas.Title>
+//           </Offcanvas.Header>
+
+//           <Offcanvas.Body>
+//             <Nav className="justify-content-end flex-grow-1 pe-3 navbar-offcanvas">
+//               <Nav.Link href="/" className={`nav-link-custom ${isLinkActive('/') ? 'active' : ''}`}>Home</Nav.Link>
+//               <Nav.Link href="/availablePets" className={`nav-link-custom ${isLinkActive('/availablePets') ? 'active' : ''}`}>Available Pets</Nav.Link>
+//               <Nav.Link href="/postAPet" className={`nav-link-custom ${isLinkActive('/postAPet') ? 'active' : ''}`}>Post a Pet</Nav.Link>
+//               {isLoggedIn ? (
+//                 <>
+//                   <Nav.Link href="/myPosts" className={`nav-link-custom ${isLinkActive('/myPosts') ? 'active' : ''}`}>My Posts</Nav.Link>
+//                   <Nav.Link href="/myProfile" className={`nav-link-custom ${isLinkActive('/myProfile') ? 'active' : ''}`}>My Profile</Nav.Link>
+//                   <Nav.Link href="/" onClick={handleLogout} className={`nav-link-custom ${isLinkActive('/') ? 'active' : ''}`}>Logout</Nav.Link>
+//                 </>
+//               ) : (
+//                 <Nav.Link href="/login" className={`nav-link-custom ${isLinkActive('/login') ? 'active' : ''}`}>Login</Nav.Link>
+//               )}
+//             </Nav>
+//           </Offcanvas.Body>
+//         </Navbar.Offcanvas>
+//       </Container>
+//     </Navbar>
+//   );
+// }
+
+// export default NavigationBar;
+
+
+
+
+
+
+// import React, { useState } from "react";
+// import { Link, useLocation, useNavigate } from "react-router-dom";
+// import Navbar from "react-bootstrap/Navbar";
+// import Container from "react-bootstrap/Container";
+// import Nav from "react-bootstrap/Nav";
+// import Offcanvas from "react-bootstrap/Offcanvas";
+// import "./NavBar.css";
+
+// export const NavigationBar = () => {
+//   const navigate = useNavigate();
+//   const location = useLocation();
+//   const [showOffcanvas, setShowOffcanvas] = useState(false);
+
+//   const handleLogout = () => {
+//     localStorage.removeItem("furEverHome_user");
+//     navigate("/", { replace: true });
+//     setShowOffcanvas(false); // Close offcanvas after logout
+//   };
+
+//   const isLoggedIn = localStorage.getItem("furEverHome_user");
+
+//   // Function to determine if a link is active
+//   const isLinkActive = (href) => {
+//     // Check if the current pathname exactly matches the href
+//     return location.pathname === href;
+//   };
+
+//   return (
+//     <>
+//       <Navbar expand="false" className="navbar-custom mb-3">
+//         <Container fluid>
+//           <Navbar.Brand href="/">
+//             <img
+//               src="./images/Logo1.png"
+//               width="250"
+//               height="50"
+//               alt="Fur-Ever-Home Logo"
+//             />
+//           </Navbar.Brand>
+//           <Navbar.Toggle
+//             aria-controls={`offcanvasNavbar-expand`}
+//             onClick={() => setShowOffcanvas(true)}
+//           />
+//         </Container>
+//       </Navbar>
+
+//       <Offcanvas
+//         show={showOffcanvas}
+//         onHide={() => setShowOffcanvas(false)}
+//         placement="end"
+//         id="offcanvasNavbar-expand"
+//       >
+//         <Offcanvas.Header closeButton>
+//           <Offcanvas.Title>
+//             <img
+//                  src="./images/Logo1.png"
+//                  width="280"
+//                  height="60"
+//                  alt="Fur-Ever-Home Logo"
+//                />
+// </Offcanvas.Title>
+//         </Offcanvas.Header>
+//         <Offcanvas.Body>
+//           <Nav className="flex-column">
+//             <Nav.Link
+//               href="/"
+//               className={`nav-link-custom ${
+//                 isLinkActive("/") ? "active" : ""
+//               }`}
+//               onClick={() => setShowOffcanvas(false)}
+//             >
+//               Home
+//             </Nav.Link>
+//             <Nav.Link
+//               href="/availablePets"
+//               className={`nav-link-custom ${
+//                 isLinkActive("/availablePets") ? "active" : ""
+//               }`}
+//               onClick={() => setShowOffcanvas(false)}
+//             >
+//               Available Pets
+//             </Nav.Link>
+//             <Nav.Link
+//               href="/postAPet"
+//               className={`nav-link-custom ${
+//                 isLinkActive("/postAPet") ? "active" : ""
+//               }`}
+//               onClick={() => setShowOffcanvas(false)}
+//             >
+//               Post a Pet
+//             </Nav.Link>
+//             {isLoggedIn ? (
+//               <>
+//                 <Nav.Link
+//                   href="/myPosts"
+//                   className={`nav-link-custom ${
+//                     isLinkActive("/myPosts") ? "active" : ""
+//                   }`}
+//                   onClick={() => setShowOffcanvas(false)}
+//                 >
+//                   My Posts
+//                 </Nav.Link>
+//                 <Nav.Link
+//                   href="/myProfile"
+//                   className={`nav-link-custom ${
+//                     isLinkActive("/myProfile") ? "active" : ""
+//                   }`}
+//                   onClick={() => setShowOffcanvas(false)}
+//                 >
+//                   My Profile
+//                 </Nav.Link>
+//                 <Nav.Link
+//                   href="/"
+//                   className="nav-link-custom"
+//                   onClick={() => {
+//                     handleLogout();
+//                     setShowOffcanvas(false);
+//                   }}
+//                 >
+//                   Logout
+//                 </Nav.Link>
+//               </>
+//             ) : (
+//               <Nav.Link
+//                 href="/login"
+//                 className={`nav-link-custom ${
+//                   isLinkActive("/login") ? "active" : ""
+//                 }`}
+//                 onClick={() => setShowOffcanvas(false)}
+//               >
+//                 Login
+//               </Nav.Link>
+//             )}
+//           </Nav>
+//         </Offcanvas.Body>
+//       </Offcanvas>
+//     </>
+//   );
+// };
+
+// export default NavigationBar;
+
+
+
+
+
+
+
+
+
+
+
+
+import React, { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import "./NavBar.css";
 
 export const NavigationBar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const [showOffcanvas, setShowOffcanvas] = useState(false);
 
   const handleLogout = () => {
     localStorage.removeItem("furEverHome_user");
     navigate("/", { replace: true });
+    setShowOffcanvas(false); // Close offcanvas after logout
   };
 
   const isLoggedIn = localStorage.getItem("furEverHome_user");
 
-  return (
-    <Navbar expand="false" className="navbar-custom bg-body-tertiary mb-3">
-      <Container fluid>
-        <Navbar.Brand href="/">
-          <img
-            src="./images/Logo1.png"
-            width="250"
-            height="50"
-            alt="Fur-Ever-Home Logo"
-          />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls={`offcanvasNavbar-expand`} />
-        <Navbar.Offcanvas
-          id={`offcanvasNavbar-expand`}
-          aria-labelledby={`offcanvasNavbarLabel-expand`}
-          placement="end"
-        >
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title id={`offcanvasNavbarLabel-expand`}>
-              Fur-Ever-Home
-            </Offcanvas.Title>
-          </Offcanvas.Header>
+  // Function to determine if a link is active
+  const isLinkActive = (href) => {
+    // Check if the current pathname exactly matches the href
+    return location.pathname === href;
+  };
 
-          <Offcanvas.Body>
-            <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link href="/" className="active">Home</Nav.Link>
-              <Nav.Link href="/availablePets">Available Pets</Nav.Link>
-              <Nav.Link href="/postAPet">Post a Pet</Nav.Link>
-              {isLoggedIn ? (
-                <>
-                  <Nav.Link href="/myPosts">My Posts</Nav.Link>
-                  <Nav.Link href="/myProfile">My Profile</Nav.Link>
-                  <Nav.Link href="/" onClick={handleLogout}>Logout</Nav.Link>
-                </>
-              ) : (
-                <Nav.Link href="/login">Login</Nav.Link>
-              )}
-            </Nav>
-          </Offcanvas.Body>
-        </Navbar.Offcanvas>
-      </Container>
-    </Navbar>
+  return (
+    <>
+      <Navbar expand="false" className="navbar-custom mb-3">
+        <Container fluid>
+          <Navbar.Brand href="/">
+            <img
+              src="./images/Logo1.png"
+              width="250"
+              height="50"
+              alt="Fur-Ever-Home Logo"
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle
+            aria-controls={`offcanvasNavbar-expand`}
+            onClick={() => setShowOffcanvas(true)}
+          />
+        </Container>
+      </Navbar>
+
+      <Offcanvas
+        show={showOffcanvas}
+        onHide={() => setShowOffcanvas(false)}
+        placement="end"
+        id="offcanvasNavbar-expand"
+      >
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>
+            <img
+              src="./images/Logo1.png"
+              width="280"
+              height="60"
+              alt="Fur-Ever-Home Logo"
+            />
+          </Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <Nav className="flex-column">
+            <Nav.Link
+              href="/"
+              className={`nav-link-custom ${
+                isLinkActive("/") ? "active" : ""
+              }`}
+              onClick={() => setShowOffcanvas(false)}
+            >
+              Home
+            </Nav.Link>
+            <Nav.Link
+              href="/availablePets"
+              className={`nav-link-custom ${
+                isLinkActive("/availablePets") ? "active" : ""
+              }`}
+              onClick={() => setShowOffcanvas(false)}
+            >
+              Available Pets
+            </Nav.Link>
+            <Nav.Link
+              href="/postAPet"
+              className={`nav-link-custom ${
+                isLinkActive("/postAPet") ? "active" : ""
+              }`}
+              onClick={() => setShowOffcanvas(false)}
+            >
+              Post a Pet
+            </Nav.Link>
+            {isLoggedIn ? (
+              <>
+                <Nav.Link
+                  href="/myPosts"
+                  className={`nav-link-custom ${
+                    isLinkActive("/myPosts") ? "active" : ""
+                  }`}
+                  onClick={() => setShowOffcanvas(false)}
+                >
+                  My Posts
+                </Nav.Link>
+                <Nav.Link
+                  href="/myProfile"
+                  className={`nav-link-custom ${
+                    isLinkActive("/myProfile") ? "active" : ""
+                  }`}
+                  onClick={() => setShowOffcanvas(false)}
+                >
+                  My Profile
+                </Nav.Link>
+                <Nav.Link
+                  href="/"
+                  className="nav-link-custom"
+                  onClick={() => {
+                    handleLogout();
+                    setShowOffcanvas(false);
+                  }}
+                >
+                  Logout
+                </Nav.Link>
+              </>
+            ) : (
+              <Nav.Link
+                href="/login"
+                className={`nav-link-custom ${
+                  isLinkActive("/login") ? "active" : ""
+                }`}
+                onClick={() => setShowOffcanvas(false)}
+              >
+                Login
+              </Nav.Link>
+            )}
+          </Nav>
+        </Offcanvas.Body>
+      </Offcanvas>
+    </>
   );
-}
+};
 
 export default NavigationBar;

@@ -18,9 +18,22 @@
     height:20%;
     margin-bottom: 5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-  
+    
+      width: 45%;
+      height: 35%;
+      background:rgb(255, 243, 212, 0.95);
+      border-radius: 50%;
+      border-style: double;
+      border: 20px solid #8e7359;
+      border-style: double;
+
   }
   
+
+  /* background-color: #00238c;
+  background-image: url(http://www.transparenttextures.com/patterns/wood-pattern.png); */
+
+
   .welcome-container img{
     width:50%;
     height: 80%;

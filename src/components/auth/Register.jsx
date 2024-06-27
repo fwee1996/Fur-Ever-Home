@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createUser, getUserByEmail } from "../../services/userService";
+import "./Register.css"
 
 export const Register = () => {
   const [user, setUser] = useState({
@@ -57,7 +58,7 @@ export const Register = () => {
   return (
     <main style={{ textAlign: "center" }}>
       <form className="form-register" onSubmit={handleRegister}>
-        <h1>Fur-Ever-Home</h1>
+      <img src="./images/Logo1.png" alt="welcome" />
         <h2>Please Register</h2>
         <fieldset>
           <div className="form-group">

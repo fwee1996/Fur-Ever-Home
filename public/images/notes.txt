@@ -1,0 +1,5 @@
+from local comp, use public/images to store images! Lazy to move the other images/ files but next time do this!
+for Pet Details need :  if (petPostObject) {
+      petPostObject.photo = petPostObject.photo.replace('./', '/');
+    }
+to render image ----absolute file path--public directory--- because React searches that path!

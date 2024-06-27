@@ -253,7 +253,7 @@
       "behavioralIssues": "none",
       "reasonForRehoming": "Cant afford vet bills.",
       "ownerId": 1,
-      "photo": "./images/Kitty2024.jpg",
+      "photo": "/images/Kitty2024.jpg",
       "timestamp": "2024-04-28T02:00:54.808Z",
       "ownersPets": [
         {

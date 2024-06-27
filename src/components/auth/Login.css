@@ -1,98 +1,95 @@
+/* General styling for the login container */
 .container-login {
   text-align: center;
-height:800px;
-}
-
-.container-login > section > a {
-  text-decoration: underline;
-  color: var(--secondary);
-
-}
-
-.form-login {
-  width: 60%;
-  margin: 2rem auto;
-  
-}
-
-.form-login > h1 {
-  font-size: 2.5rem;
-  text-align: center;
-}
-
-.form-login > h2 {
-  text-align: center;
-  font-size: 1.5rem;
-}
-
-.form-login > fieldset > input[type="email"] {
-  width: 25em;
-}
-
-.login-btn {
-  align-self: flex-end;
-}
-
-.login-btn:focus {
-  box-shadow: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-/************* FORM STYLES *************/
-.container-login > section{
-margin-top:50px;
-}
-
-
-form {
-  /* margin: 3rem 5rem;
-  border: 1px solid var(--outline);
-  border-radius: 10px;
-  padding: 1rem 0rem 0rem 1rem;
-  box-shadow: 1px 2px 5px lightgray;
-  background-color: var(--offWhite); */
-  font-family: 'Playwrite IT Moderna', sans-serif;
-  max-width: 40%;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: rgb(255, 233, 239);
-  /* background-color: #fff; */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  text-align: left;
-  height:auto;
-  
-}
-
-
-fieldset {
-  min-width: 0;
-  padding-bottom: 1.5rem;
-  margin: 0;
-  border: 0;
-}
-
-.form-control {
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  border: 1px solid var(--outline);
-  border-radius: 0.25rem;
-}
-
-.form-group {
-  margin-right: 1rem;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start; /* Align content at the top */
+  margin-top: 100px; /* Adjusted margin from the top */
+  
 }
 
+
+/* Styling for the "Not a member yet?" link */
+.container-login > section > a {
+  text-decoration: underline; /* Underlines the link text */
+  color: var(--secondary); /* Uses a custom CSS variable for text color */
+  display: block; /* Makes the link a block element to take up full width */
+  margin-top: 20px; /* Adds spacing above the link */
+}
+
+/* Styling for the login form */
+.form-login {
+  width: 60%; /* Width of the form container */
+  margin: 0 auto; /* Centers the form horizontally */
+  align-items: center; /* Centers items horizontally within the form */
+  justify-content: center; /* Centers content vertically within the form */
+  text-align: center; /* Center aligns text content within the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Styling for the logo image within the form */
+.form-login img {
+  margin-top:10px;
+  width: 500px; /* Width of the logo image */
+  height: 100px; /* Height of the logo image */
+}
+
+/* Styling for headings within the form */
+.form-login h2 {
+  font-size: 1.5rem; /* Font size for secondary headings */
+  margin-top: 20px; /* Adds spacing above the heading */
+}
+
+/* Margin adjustment for the section containing the link */
+.container-login > section {
+  margin-top: 20px; /* Adds spacing above the section */
+}
+
+/* Additional styling for the login form */
+form {
+  font-family: 'Playwrite IT Moderna', sans-serif; /* Font family for form text */
+  max-width: 40%; /* Maximum width of the form */
+  margin: 0 auto; /* Centers the form horizontally */
+  padding: 20px; /* Padding inside the form */
+  background-color: rgb(255, 248, 240, 0.95); /* Background color of the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for form */
+  border-radius: 8px; /* Border radius for form edges */
+  text-align: left; /* Left aligns text content within the form */
+}
+
+/* Styling for fieldsets within the form */
+fieldset {
+  min-width: 0; /* Ensures fieldsets can shrink */
+  padding-bottom: 1.5rem; /* Padding below fieldsets */
+  margin: 0; /* Resets margins for fieldsets */
+  border: 0; /* Removes borders from fieldsets */
+}
+
+/* Styling for form input controls */
+.form-control {
+  height: calc(1.5em + 0.75rem + 2px); /* Calculates height of form controls */
+  padding: 0.375rem 0.75rem; /* Padding inside form controls */
+  font-size: 1rem; /* Font size of form controls */
+  border: 1px solid var(--outline); /* Border style of form controls */
+  border-radius: 0.25rem; /* Border radius of form controls */
+}
+
+/* Styling for form groups */
+.form-group {
+  margin-right: 1rem; /* Right margin for form groups */
+  display: flex; /* Enables flexbox layout for form groups */
+  flex-direction: column; /* Stacks form group elements vertically */
+}
+
+/* Additional styling for form buttons */
 .form-btn {
-  align-self: flex-end;
+  align-self: flex-end; /* Aligns form buttons to the end of their container */
 }
 
+/* Focus styling for form buttons */
 .form-btn:focus {
-  box-shadow: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+  box-shadow: none; /* Removes box shadow on button focus */
+  outline: 2px solid transparent; /* Adds transparent outline on button focus */
+  outline-offset: 2px; /* Offset for outline from button edge */
 }

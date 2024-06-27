@@ -1,90 +1,30 @@
-/* .navbar {
-    display: flex;
-    flex-wrap: nowrap;
-    background-color: var(--dark);
-    margin: 0;
-    width: 100%;
-    padding: 0.5rem;
-  }
-
-  .navbar-item {
-    flex-basis: 20%;
-    list-style-type: none;
-    text-align: center;
-    color: var(--offWhite);
-  }
-
-  .navbar-link {
-    text-decoration: none;
-    font-family: "Quicksand", sans-serif;
-    letter-spacing: 1px;
-  }
-
-  .navbar-logout {
-    margin-left: auto;
-  }
-
-  .navbar-login {
-    margin-left: auto;
-  }
-
-  .navbar-link:hover {
-    color: var(--primary);
-  } */
-
-
-
-
-/* NavBar.css */
-.navbar-custom bg-body-tertiary mb-3{
-  background-color: #FFC0CB;
-}
-/* Navbar background color */
-.navbar.navbar-custom {
-  background-color: #FFC0CB;
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+/* Notes: */
+/* className="justify-content-end flex-grow-1 pe-3 navbar-offcanvas" only take last part as name to reference */
+/* where theres space use . like: nav-link-custom active to nav-link-custom.active*/
+/* # for id  *//* Navbar background color/ styling */
+.navbar-custom {
+  background-color: rgba(255, 243, 212, 0.95); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  border-bottom: 6px solid #8e7359;
 }
 
-/* Navbar brand styling */
-.navbar.navbar-custom .navbar-brand {
-  color: #FFFFFF;
-  font-size: 1.5rem;
+#offcanvasNavbar-expand{
+  background-color: rgba(255, 245, 220, 0.96); }
+
+/* Offcanvas menu link styling */
+.nav-link-custom {
+  font-family: 'Playwrite IT Moderna', sans-serif;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
-/* Navbar links styling */
-.navbar.navbar-custom .navbar-nav .nav-link {
-  color: #FFFFFF;
-  font-size: 1.2rem;
+/* Hover effect for offcanvas menu links */
+.nav-link-custom:hover {
+  color: #ff69b4 !important;; /* Pink text color on hover */
 }
 
-/* Active and hover link styling */
-.navbar.navbar-custom .navbar-nav .nav-link.active,
-.navbar.navbar-custom .navbar-nav .nav-link:hover {
-  font-weight: bold;
-}
-
-/* Offcanvas header styling */
-.navbar.navbar-custom .offcanvas-header {
-  background-color: #FF69B4;
-  color: #FFFFFF;
-}
-
-/* Offcanvas title styling */
-.navbar.navbar-custom .offcanvas-title {
-  color: #FFFFFF;
-}
-
-/* Optional: Adjust toggle button and icon */
-.navbar.navbar-custom .navbar-toggler-icon {
-  background-color: #FFFFFF;
-}
-
-.navbar.navbar-custom .navbar-toggler {
-  border-color: #FFFFFF;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .navbar.navbar-custom .navbar-nav .nav-link {
-    font-size: 1rem;
-  }
+/* Active link styling for offcanvas menu */
+.nav-link-custom.active {
+  color: #ff1493; /* Light pink text color for active link */
+  font-weight: bold; /* Bold font for active link */
 }

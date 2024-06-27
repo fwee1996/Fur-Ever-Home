@@ -38,7 +38,7 @@ export const Login = () => {
     <main className="container-login">
       <section>
         <form className="form-login" onSubmit={handleLogin}>
-          <h1>Fur-Ever-Home</h1>
+        <img src="./images/Logo1.png" alt="welcome" />
           <h2>Please sign in</h2>
           <fieldset>
             <div className="form-group">
