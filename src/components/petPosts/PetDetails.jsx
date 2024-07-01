@@ -274,24 +274,25 @@ export const PetDetails = ({ currentUser }) => {
     fetchPetPostDetails();
   }, [petPostId]);
 
+  // get and set:
   const fetchPetPostDetails = async () => {
     const petPostArray = await getAllPetPosts();
     const petPostObject = petPostArray.find(petPost => petPost.id.toString() === petPostId);
-    // Ensure the photo path is absolute
+    // make sure photo path is absolute
     if (petPostObject) {
       petPostObject.photo = petPostObject.photo.replace('./', '/');
     }
     setPetDetails(petPostObject);
-    console.log(petPostObject); // Log the pet post object
+    //console.log(petPostObject); // just checking
   };
 
-  const handleContactOwner = () => {
-    if (currentUser) {
-      navigate(`/availablePets/petDetails/${petPostId}/ownerDetails`);
-    } else {
-      navigate('/login');
-    }
-  };
+  // const handleContactOwner = () => {
+  //   if (currentUser) {
+  //     navigate(`/availablePets/petDetails/${petPostId}/ownerDetails`);
+  //   } else {
+  //     navigate('/login');
+  //   }
+  // };---------done this through App <Authorized></Authorized>
 
   if (!petDetails) return <div>Loading...</div>;
 

@@ -33,7 +33,7 @@ export const Register = () => {
           })
         );
 
-        navigate("/");
+        navigate("/login");
       }
     });
   };

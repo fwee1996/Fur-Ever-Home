@@ -35,7 +35,6 @@ export const MyPosts = ({ currentUser }) => {
                 setMyPosts(prevPosts =>
                     prevPosts.filter(petPost => petPost.id !== postToDelete.id)
                 );
-                alert('Pet post deleted successfully.');
             } catch (error) {
                 console.error('Failed to delete pet post:', error);
                 alert('Failed to delete pet post.');

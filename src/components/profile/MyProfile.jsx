@@ -256,6 +256,71 @@
 
 
 
+// import React, { useEffect, useState } from 'react';
+// import { deleteUserProfile, getAllUsers } from "../../services/userService";
+// import { useNavigate } from 'react-router-dom';
+// import { Button } from 'react-bootstrap';
+// import './MyProfile.css'; // Import the CSS file
+
+// export const MyProfile = ({ currentUser }) => {
+//   const [user, setUser] = useState({});
+//   const navigate = useNavigate();
+
+//   useEffect(() => {
+//     getAllUsers().then((usersArray) => {
+//       const userProfile = usersArray.find(user => user.id === currentUser.id);
+//       setUser(userProfile);
+//     });
+//   }, [currentUser.id]);
+
+//   const handleDeleteProfile = async () => {
+//     const confirmDelete = window.confirm('Are you sure you want to delete your profile?');
+//     if (confirmDelete) {
+//       try {
+//         await deleteUserProfile(currentUser.id);
+//         alert('Profile successfully deleted');
+//         navigate('/login'); // Redirect to login or another appropriate page
+//       } catch (error) {
+//         console.error('Failed to delete profile', error);
+//         alert('Failed to delete profile');
+//       }
+//     }
+//   };
+
+//   return (
+//     <div className='full-profile-container'>
+//     <div className="profile-container">
+//       <h1 className="profile-title">My Profile</h1>
+//       <div className="profile-photo-container">
+//         <img src={user.photo} alt={user.fullName} className="user-photo" />
+//       </div>
+//       <div className="profile-details">
+//         <p><strong>Full Name:</strong> {user.fullName}</p>
+//         <p><strong>Email:</strong> {user.email}</p>
+//         <p><strong>Phone Number:</strong> {user.phoneNumber}</p>
+//         <p><strong>City:</strong> {user.city}</p>
+//         <p><strong>State:</strong> {user.state}</p>
+//       </div>
+//       <div className="profile-buttons">
+//         <Button variant="warning" onClick={() => navigate(`/updateProfile/${currentUser.id}`)}>Update Profile</Button>
+//         <Button variant="danger" onClick={handleDeleteProfile}>Delete Profile</Button>
+//       </div>
+//     </div>
+//     </div>
+//   );
+// };
+
+
+
+
+
+
+
+
+
+
+
+
 import React, { useEffect, useState } from 'react';
 import { deleteUserProfile, getAllUsers } from "../../services/userService";
 import { useNavigate } from 'react-router-dom';
@@ -273,12 +338,18 @@ export const MyProfile = ({ currentUser }) => {
     });
   }, [currentUser.id]);
 
+
+  // Handling Profile Deletion:
+  // When handleDeleteProfile is executed after confirming deletion, it removes the user's profile using deleteUserProfile(currentUser.id).
+  // Upon successful deletion, it alerts the user and clears the localStorage item (localStorage.removeItem("furEverHome_user")) to simulate a logout. This ensures that upon redirection to /login, the navigation bar in NavigationBar will show the appropriate links based on the absence of the furEverHome_user item in localStorage.
   const handleDeleteProfile = async () => {
     const confirmDelete = window.confirm('Are you sure you want to delete your profile?');
     if (confirmDelete) {
       try {
         await deleteUserProfile(currentUser.id);
         alert('Profile successfully deleted');
+        // Clear local storage to simulate logout
+        localStorage.removeItem("furEverHome_user");
         navigate('/login'); // Redirect to login or another appropriate page
       } catch (error) {
         console.error('Failed to delete profile', error);
@@ -289,23 +360,23 @@ export const MyProfile = ({ currentUser }) => {
 
   return (
     <div className='full-profile-container'>
-    <div className="profile-container">
-      <h1 className="profile-title">My Profile</h1>
-      <div className="profile-photo-container">
-        <img src={user.photo} alt={user.fullName} className="user-photo" />
+      <div className="profile-container">
+        <h1 className="profile-title">My Profile</h1>
+        <div className="profile-photo-container">
+          <img src={user.photo} alt={user.fullName} className="user-photo" />
+        </div>
+        <div className="profile-details">
+          <p><strong>Full Name:</strong> {user.fullName}</p>
+          <p><strong>Email:</strong> {user.email}</p>
+          <p><strong>Phone Number:</strong> {user.phoneNumber}</p>
+          <p><strong>City:</strong> {user.city}</p>
+          <p><strong>State:</strong> {user.state}</p>
+        </div>
+        <div className="profile-buttons">
+          <Button variant="warning" onClick={() => navigate(`/updateProfile/${currentUser.id}`)}>Update Profile</Button>
+          <Button variant="danger" onClick={handleDeleteProfile}>Delete Profile</Button>
+        </div>
       </div>
-      <div className="profile-details">
-        <p><strong>Full Name:</strong> {user.fullName}</p>
-        <p><strong>Email:</strong> {user.email}</p>
-        <p><strong>Phone Number:</strong> {user.phoneNumber}</p>
-        <p><strong>City:</strong> {user.city}</p>
-        <p><strong>State:</strong> {user.state}</p>
-      </div>
-      <div className="profile-buttons">
-        <Button variant="warning" onClick={() => navigate(`/updateProfile/${currentUser.id}`)}>Update Profile</Button>
-        <Button variant="danger" onClick={handleDeleteProfile}>Delete Profile</Button>
-      </div>
-    </div>
     </div>
   );
 };

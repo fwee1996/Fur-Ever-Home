@@ -1,121 +1,159 @@
 /* PetPosts.css */
+
+/* Import Google Font for header */
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
-h2{
-    font-family: 'Playwrite IT Moderna', sans-serif;
-    font-weight: bolder;
-    font-size: 5rem;
-}
 
-.App{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; 
-}
-
-/* Individual pet post card */
+/* Base styling for pet post cards */
 .pet-card {
-  width: calc(20% - 20px); /* Adjust card width based on desired layout */
-  margin-bottom: 5rem;
-  background-color: rgb(255, 248, 240, 0.95); /* Light blue background */
-  /* #FAF4E1 rgb(255, 235, 235,0.95) rgb(240, 227, 211)*/
-  padding: 15px;
-  border-radius: 10px;
+  width: 300px; /* Adjust card width based on desired layout */
+  height: 400px; /* Ensure cards take up full height */
+  margin-bottom: 4rem; /* Reduced margin for better spacing between cards */
+  background-color: rgba(255, 248, 240, 0.95); /* Light blue background with transparency */
+  padding: 15px; /* Padding inside the card */
+  border-radius: 10px; /* Rounded corners for the card */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Soft shadow */
-  transition: box-shadow 0.3s ease;
-  justify-content: space-evenly;
-  margin-right: 30px;
+  transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow on hover */
+  justify-content: flex-start; /* Align items starting from the left edge */
+  margin-right: 50px; /* Right margin to separate cards */
+  margin-left: 50px;
 }
 
+/* Hover effect for pet card */
 .pet-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
-    transform: scale(1.1); /* Scale up slightly on hover */
-
+  transform: scale(1.1); /* Scale up slightly on hover */
 }
 
 /* Header inside pet card */
 .pet-card .petPost-header {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.pet-card .pet-photo {
-  width: 50%;
-  height: 50%; /* Ensure the image fills its container */
-  object-fit: cover; /* Maintain aspect ratio and cover container */
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-
-/* Information sections inside pet card */
-.pet-card .petPost-info {
-  margin-bottom: 5px;
+  font-size: 1.5rem; /* Font size for pet post header */
+  font-weight: bold; /* Bold font weight */
+  margin-bottom: 10px; /* Bottom margin for spacing */
+  font-family: 'Playwrite IT Moderna', sans-serif; /* Google font family */
 }
 
 /* Image inside pet card */
 .pet-card .pet-photo {
-  width: 100%;
-  height: 20rem;
-  border-radius: 8px;
-  margin-top: 10px;
+  width: 100%; /* Full width for image inside card */
+  height: 300px; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for image */
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+  margin-top: 10px; /* Top margin for spacing */
 }
 
 /* Buttons inside pet card */
 .pet-card button {
-  margin-top: 10px;
-  margin-right: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px; /* Top margin for buttons */
+  margin-right: 10px; /* Right margin for spacing between buttons */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for button effects */
 }
 
+/* Button hover effect */
 .pet-card button:hover {
   transform: translateY(-2px); /* Move button slightly up on hover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow on hover */
 }
 
-/* Modal styles */
-.modal-dialog {
-  max-width: 600px; /* Adjust modal width as needed */
-}
-
-
-/* .petPost-list {
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-} */
-
 /* Container for pet posts */
 .petPosts-container {
-  display: flex;
-  flex-direction: row;
+  display: flex; /* Flex container */
+  flex-direction: column; /* Arrange children in a column */
+  padding: 20px; /* Padding inside the container */
+  align-items: center; /* Center-align items horizontally */
+}
+
+/* Title for pet posts */
+.petPosts-container h2 {
+  font-family: 'Playwrite IT Moderna', sans-serif; /* Google font family */
+  font-weight: bold; /* Bold font weight */
+  font-size: 2.5rem; /* Font size for title */
+  margin-bottom: 20px; /* Bottom margin for spacing */
+}
+
+/* Section for pet posts */
+.pet-post {
+  display: flex; /* Flex container */
   flex-wrap: wrap; /* Wrap items to the next line */
-  justify-content: space-around;/*  Center-align items with space around them */
-  padding: 20px;/*  Add padding for better spacing */
- } 
+  justify-content: center; /* Evenly distribute items */
+  padding: 20px; /* Padding inside the section */
+  height:2500px;
+}
 
-.pet-post{
+/* Styling for filter bar */
+.filter {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; 
-  justify-content: space-around;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  padding: 20px; 
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-/* .petPosts-container h2{
-  font-family: "Times New Roman", Times, serif;
-  font-weight: bold;
-  font-size: rem;
-} */
+.filter select {
+  margin-right: 20px;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
 
-.petPosts-container h2{
-    font-family: 'Playwrite IT Moderna', sans-serif;
-    font-weight: bolder;
-    font-size: 2.5rem;
+.filter input[type="text"] {
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 20px;
 }
-.petPost-header{
-  font-family: 'Playwrite IT Moderna', sans-serif;
+
+/* Pagination styling */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
+
+.pagination .page-item {
+  list-style: none;
+  margin: 0 5px;
+}
+
+.pagination .page-link {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.pagination .page-link:hover,
+.pagination .page-link:focus {
+  background-color: #e3e3e3;
+}
+
+.pagination .page-item.active .page-link {
+  background-color:rgb(224, 192, 238);
+  color: #fff;
+  border: 1px solid rgb(211, 179, 225); /* Soft shadow */
+}
+
+.pagination .page-item.disabled .page-link {
+  pointer-events: none;
+  color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

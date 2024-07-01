@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
-/* Notes: */
-/* className="justify-content-end flex-grow-1 pe-3 navbar-offcanvas" only take last part as name to reference */
-/* where theres space use . like: nav-link-custom active to nav-link-custom.active*/
-/* # for id  *//* Navbar background color/ styling */
+
+/* Navbar background color and styling */
 .navbar-custom {
-  background-color: rgba(255, 243, 212, 0.95); 
+  background-color: rgba(255, 243, 212, 0.95);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   border-bottom: 6px solid #8e7359;
 }
 
-#offcanvasNavbar-expand{
-  background-color: rgba(255, 245, 220, 0.96); }
+/* Offcanvas background color */
+#offcanvasNavbar-expand {
+  background-color: rgba(255, 245, 220, 0.96);
+}
 
 /* Offcanvas menu link styling */
 .nav-link-custom {
@@ -20,11 +20,32 @@
 
 /* Hover effect for offcanvas menu links */
 .nav-link-custom:hover {
-  color: #ff69b4 !important;; /* Pink text color on hover */
+  color: #ff69b4 !important; /* Pink text color on hover */
 }
 
 /* Active link styling for offcanvas menu */
 .nav-link-custom.active {
   color: #ff1493; /* Light pink text color for active link */
   font-weight: bold; /* Bold font for active link */
+}
+
+/* Login link styling */
+.navbar-login {
+  font-family: 'Playwrite IT Moderna', sans-serif;
+  display: flex;
+  justify-content: flex-end; /* Align login link to the left */
+  align-items: center; /* Center vertically */
+  flex-grow: 1; /* Take up remaining space */
+  margin-right: 40px; /* Adjust margin as needed */
+  font-size: larger;
+}
+
+.navbar-login a {
+  color: #000; /* Adjust login link color */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.navbar-login a:hover {
+  color: #ff69b4; /* Pink text color on hover */
 }
