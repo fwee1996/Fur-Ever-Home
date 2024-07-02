@@ -32,7 +32,6 @@
   
   .article-list-container {
     width: 50%;
-   
   }
   
   .article {
@@ -44,19 +43,27 @@
     align-items: center;
 
   }
+
+   
   
   /* Individual article card */
   .article-list-item {
-    margin-bottom: 5rem;
+    /* margin-bottom: 1rem; */
     background-color: rgb(255, 248, 240, 0.95); /* Light blue background */
     padding: 20px;
     border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Soft shadow */
     transition: box-shadow 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    margin-bottom: 50px;
   } 
 
   .photo-and-info{
+    margin-left: 30px;
+    /* margin-right: 30px; */
+  }
+
+  .photo-and-info photo{
     margin-left: 30px;
   }
 
@@ -76,9 +83,15 @@
 
   /* Information sections inside article card */
   .article-list-item p {
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     font-size: 16px;
     font-family: 'Playwrite IT Moderna', sans-serif;
+    .article p{
+      margin-top: 1rem;
+      /* font-size: 100px; */
+      /* font-family: 'Playwrite IT Moderna', sans-serif; */
+      /* font-weight: bold; */
+    } 
 
   }
   .article-list-item:hover {

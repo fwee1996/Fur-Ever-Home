@@ -491,6 +491,16 @@
       "state": "North Carolina",
       "photo": "https://randomuser.me/api/portraits/women/35.jpg",
       "isOwner": true
+    },
+    {
+      "email": "b@gmail.com",
+      "fullName": "a",
+      "phoneNumber": "4",
+      "city": "Huntington",
+      "state": "WV",
+      "isOwner": false,
+      "photo": "h",
+      "id": 36
     }
   ],
   "adopters": [
@@ -538,7 +548,7 @@
   "petPosts": [
     {
       "id": 1,
-      "name": "Kittie",
+      "name": "Kitty",
       "age": "6",
       "species": "cat",
       "breed": "domestic shorthair",

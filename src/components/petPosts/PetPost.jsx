@@ -1082,203 +1082,465 @@
 
 
 
+// import React, { useState, useEffect } from 'react';
+// import { Button } from 'react-bootstrap';
+// import { getAllPetPosts, deletePetPost } from '../../services/petPostService';
+// import './PetPosts.css';
+// import { useNavigate } from 'react-router-dom';
+// import { FilterBar } from './FilterBar';
+
+// export const PetPost = () => {
+//   const [petPosts, setPetPosts] = useState([]);
+//   const navigate = useNavigate();
+//   const [searchTerm, setSearchTerm] = useState(""); // User input
+//   const [selectedAgeRange, setSelectedAgeRange] = useState("0"); // Default to "All Ages"
+//   const [selectedSpecies, setSelectedSpecies] = useState("0"); // Default to "All Species"
+//   const [filteredPosts, setFilteredPosts] = useState([]); // State to hold filtered posts
+//   const [currentPage, setCurrentPage] = useState(1); // Current page number
+//   const [scrollPosition, setScrollPosition] = useState(0); // To store scroll position
+//   const postsPerPage = 20; // Number of posts per page
+
+//   // Fetch all pet posts from the API
+//   const fetchAllPetPosts = async () => {
+//     const petPostArray = await getAllPetPosts();
+    
+//     // Sort pet posts by timestamp in descending order
+//     const sortedPosts = petPostArray.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+    
+//     let updatedPosts = sortedPosts;
+
+//     // Apply species filter if selected
+//     if (selectedSpecies !== "0") {
+//       updatedPosts = updatedPosts.filter(post => {
+//         if (selectedSpecies === "3") {
+//           return post.species.toLowerCase() !== "dog" && post.species.toLowerCase() !== "cat";
+//         } else {
+//           return post.species.toLowerCase() === mapSpeciesFilter(selectedSpecies).toLowerCase();
+//         }
+//       });
+//     }
+
+//     // Apply age filter if selected
+//     updatedPosts = applyAgeFilter(updatedPosts);
+
+//     // Apply search term filter
+//     updatedPosts = applySearchFilter(updatedPosts);
+
+//     setFilteredPosts(updatedPosts);
+//   };
+
+//   useEffect(() => {
+//     fetchAllPetPosts();
+
+//     // Retrieve and set currentPage from local storage
+//     const storedPage = localStorage.getItem('currentPage');
+//     const initialPage = storedPage ? parseInt(storedPage) : 1;
+//     setCurrentPage(initialPage);
+
+//     // Retrieve and set scroll position from local storage
+//     const storedScrollPosition = localStorage.getItem('scrollPosition');
+//     if (storedScrollPosition) {
+//       setScrollPosition(parseInt(storedScrollPosition));
+//     }
+
+//     // Clean up local storage after using it
+//     localStorage.removeItem('currentPage');
+//     localStorage.removeItem('scrollPosition');
+
+//   }, [searchTerm, selectedAgeRange, selectedSpecies]);
+
+
+//   // Function to apply age filtering
+//   const applyAgeFilter = (posts) => {
+//     switch (selectedAgeRange) {
+//       case "1":
+//         return posts.filter(post => {
+//           if (post.ageUnit === "years") {
+//             return parseInt(post.age) <= 1;
+//           } else {
+//             return true; // Consider all if ageUnit is not "years" (e.g., weeks, months)
+//           }
+//         });
+//       case "2":
+//         return posts.filter(post => {
+//           if (post.ageUnit === "years") {
+//             return parseInt(post.age) >= 2 && parseInt(post.age) <= 9;
+//           } else {
+//             return false; // Exclude posts with ageUnit other than "years"
+//           }
+//         });
+//       case "3":
+//         return posts.filter(post => {
+//           if (post.ageUnit === "years") {
+//             return parseInt(post.age) >= 10;
+//           } else {
+//             return false; // Exclude posts with ageUnit other than "years"
+//           }
+//         });
+//       default:
+//         return posts;
+//     }
+//   };
+
+//   // Function to map species filter option to corresponding string
+//   const mapSpeciesFilter = (selectedSpeciesOption) => {
+//     switch (selectedSpeciesOption) {
+//       case "1":
+//         return "dog";
+//       case "2":
+//         return "cat";
+//       case "3":
+//         return "others";
+//       default:
+//         return "";
+//     }
+//   };
+
+//   // Function to apply search term filter
+//   const applySearchFilter = (posts) => {
+//     if (searchTerm.trim() === "") {
+//       return posts; // If no search term, return all posts
+//     }
+//     return posts.filter(post =>
+//       post.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+//       post.species.toLowerCase().includes(searchTerm.toLowerCase()) ||
+//       post.breed.toLowerCase().includes(searchTerm.toLowerCase()) ||
+//       post.medicalCondition.toLowerCase().includes(searchTerm.toLowerCase()) ||
+//       post.behavioralIssues.toLowerCase().includes(searchTerm.toLowerCase()) ||
+//       post.reasonForRehoming.toLowerCase().includes(searchTerm.toLowerCase())
+//     );
+//   };
+
+//   // Pagination logic
+//   const indexOfLastPost = currentPage * postsPerPage;
+//   const indexOfFirstPost = indexOfLastPost - postsPerPage;
+//   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
+
+//   // Handle page change
+//   const handlePageChange = (pageNumber) => {
+//     setCurrentPage(pageNumber);
+
+//     // Scroll to the top of the page
+//     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+//     // Store current page and scroll position in local storage
+//     localStorage.setItem('currentPage', pageNumber.toString());
+//     localStorage.setItem('scrollPosition', '0'); // Set scroll position to top
+//   };
+
+//   // Handle click on pet card to navigate to petDetails
+//   const navigateToPetDetails = (postId) => {
+//     // Store current page and scroll position in local storage
+//     localStorage.setItem('currentPage', currentPage.toString());
+//     localStorage.setItem('scrollPosition', window.pageYOffset.toString());
+//     navigate(`/availablePets/petDetails/${postId}`);
+//   };
+
+//   // Render the component
+//   return (
+//     <div className="petPosts-container">
+//       <h2>Available Pets</h2>
+//       <div className="filter">
+//         <select name="species" id="species" onChange={(event) => setSelectedSpecies(event.target.value)}>
+//           <option value="0">All Species</option>
+//           <option value="1">Dogs</option>
+//           <option value="2">Cats</option>
+//           <option value="3">Others</option>
+//         </select>
+//         <select name="age" id="age" onChange={(event) => setSelectedAgeRange(event.target.value)}>
+//           <option value="0">All Ages</option>
+//           <option value="1">0-1 Years</option>
+//           <option value="2">2-9 Years</option>
+//           <option value="3">10+ Years</option>
+//         </select>
+//         <FilterBar setSearchTerm={setSearchTerm} />
+//       </div>
+//       <section className="pet-post">
+//         {currentPosts.length === 0 ? (
+//           <p>No posts found.</p>
+//         ) : (
+//           currentPosts.map(petPost => (
+//             <div key={petPost.id} className="pet-card">
+//               <header className="petPost-header">{petPost.name}</header>
+//               <div><img src={petPost.photo} alt={petPost.name} className="pet-photo" onClick={() => navigateToPetDetails(petPost.id)} /></div>
+//             </div>
+//           ))
+//         )}
+//       </section>
+//       {/* Pagination */}
+//       <ul className="pagination">
+//         {Array.from({ length: Math.ceil(filteredPosts.length / postsPerPage) }, (_, i) => (
+//           <li key={i + 1} className={`page-item ${currentPage === i + 1 ? 'active' : ''}`}>
+//             <button onClick={() => handlePageChange(i + 1)} className="page-link">
+//               {i + 1}
+//             </button>
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };
+
+// export default PetPost;
+
+
+
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import { getAllPetPosts } from '../../services/petPostService';
+// import './PetPosts.css';
+
+// export const PetPost = () => {
+//     const [petPosts, setPetPosts] = useState([]);
+//     const navigate = useNavigate();
+
+//     useEffect(() => {
+//         fetchAllPetPosts();
+//     }, []);
+
+//     const fetchAllPetPosts = async () => {
+//         try {
+//             const petPostArray = await getAllPetPosts();
+//             setPetPosts(petPostArray);
+//         } catch (error) {
+//             console.error('Error fetching pet posts:', error);
+//             alert('Failed to fetch pet posts. Please try again.');
+//         }
+//     };
+
+//     return (
+//         <div className="petPosts-container">
+//             <h2>Available Pets</h2>
+//             <section className="pet-post">
+//                 {petPosts.length === 0 ? (
+//                     <p>No posts found.</p>
+//                 ) : (
+//                     petPosts.map(petPost => (
+//                         <div key={petPost.id} className="pet-card">
+//                             <header className="petPost-header">{petPost.name}</header>
+//                             <div>
+//                                 <img
+//                                     src={petPost.photo} // Ensure petPost object has a 'photo' field with the Cloudinary URL
+//                                     alt={petPost.name}
+//                                     className="pet-photo"
+//                                     onClick={() => navigate(`/availablePets/petDetails/${petPost.id}`)}
+//                                 />
+//                             </div>
+//                         </div>
+//                     ))
+//                 )}
+//             </section>
+//         </div>
+//     );
+// };
+
+// export default PetPost;
+
+
+
 import React, { useState, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
-import { getAllPetPosts, deletePetPost } from '../../services/petPostService';
-import './PetPosts.css';
 import { useNavigate } from 'react-router-dom';
-import { FilterBar } from './FilterBar';
+import { getAllPetPosts } from '../../services/petPostService';
+import './PetPosts.css';
 
 export const PetPost = () => {
-  const [petPosts, setPetPosts] = useState([]);
-  const navigate = useNavigate();
-  const [searchTerm, setSearchTerm] = useState(""); // User input
-  const [selectedAgeRange, setSelectedAgeRange] = useState("0"); // Default to "All Ages"
-  const [selectedSpecies, setSelectedSpecies] = useState("0"); // Default to "All Species"
-  const [filteredPosts, setFilteredPosts] = useState([]); // State to hold filtered posts
-  const [currentPage, setCurrentPage] = useState(1); // Current page number
-  const [scrollPosition, setScrollPosition] = useState(0); // To store scroll position
-  const postsPerPage = 20; // Number of posts per page
+    const [petPosts, setPetPosts] = useState([]);
+    const [filteredPosts, setFilteredPosts] = useState([]);
+    const [searchTerm, setSearchTerm] = useState("");
+    const [selectedAgeRange, setSelectedAgeRange] = useState("0");
+    const [selectedSpecies, setSelectedSpecies] = useState("0");
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(20); // Number of posts per page
+    const [scrollPosition, setScrollPosition] = useState(0); // To store scroll position
+    const navigate = useNavigate();
 
-  // Fetch all pet posts from the API
-  const fetchAllPetPosts = async () => {
-    const petPostArray = await getAllPetPosts();
-    
-    // Sort pet posts by timestamp in descending order
-    const sortedPosts = petPostArray.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-    
-    let updatedPosts = sortedPosts;
+    useEffect(() => {
+        fetchAllPetPosts();
 
-    // Apply species filter if selected
-    if (selectedSpecies !== "0") {
-      updatedPosts = updatedPosts.filter(post => {
-        if (selectedSpecies === "3") {
-          return post.species.toLowerCase() !== "dog" && post.species.toLowerCase() !== "cat";
-        } else {
-          return post.species.toLowerCase() === mapSpeciesFilter(selectedSpecies).toLowerCase();
+        // Retrieve and set currentPage from local storage
+        const storedPage = localStorage.getItem('currentPage');
+        const initialPage = storedPage ? parseInt(storedPage) : 1;
+        setCurrentPage(initialPage);
+
+        // Retrieve and set scroll position from local storage
+        const storedScrollPosition = localStorage.getItem('scrollPosition');
+        if (storedScrollPosition) {
+            setScrollPosition(parseInt(storedScrollPosition));
         }
-      });
-    }
 
-    // Apply age filter if selected
-    updatedPosts = applyAgeFilter(updatedPosts);
+        // Clean up local storage after using it
+        localStorage.removeItem('currentPage');
+        localStorage.removeItem('scrollPosition');
+    }, [currentPage, selectedAgeRange, selectedSpecies, searchTerm]);
 
-    // Apply search term filter
-    updatedPosts = applySearchFilter(updatedPosts);
+    const fetchAllPetPosts = async () => {
+        try {
+            const petPostArray = await getAllPetPosts();
 
-    setFilteredPosts(updatedPosts);
-  };
+            // Sort pet posts by timestamp in descending order
+            const sortedPosts = petPostArray.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
-  useEffect(() => {
-    fetchAllPetPosts();
+            // Apply filters and search term
+            let updatedPosts = sortedPosts;
+            updatedPosts = applySpeciesFilter(updatedPosts);
+            updatedPosts = applyAgeFilter(updatedPosts);
+            updatedPosts = applySearchFilter(updatedPosts);
 
-    // Retrieve and set currentPage from local storage
-    const storedPage = localStorage.getItem('currentPage');
-    const initialPage = storedPage ? parseInt(storedPage) : 1;
-    setCurrentPage(initialPage);
+            setPetPosts(sortedPosts);
+            setFilteredPosts(updatedPosts);
+        } catch (error) {
+            console.error('Error fetching pet posts:', error);
+            alert('Failed to fetch pet posts. Please try again.');
+        }
+    };
 
-    // Retrieve and set scroll position from local storage
-    const storedScrollPosition = localStorage.getItem('scrollPosition');
-    if (storedScrollPosition) {
-      setScrollPosition(parseInt(storedScrollPosition));
-    }
-
-    // Clean up local storage after using it
-    localStorage.removeItem('currentPage');
-    localStorage.removeItem('scrollPosition');
-
-  }, [searchTerm, selectedAgeRange, selectedSpecies]);
-
-
-  // Function to apply age filtering
-  const applyAgeFilter = (posts) => {
-    switch (selectedAgeRange) {
-      case "1":
+    const applySpeciesFilter = (posts) => {
+        if (selectedSpecies === "0") return posts; // All species selected
         return posts.filter(post => {
-          if (post.ageUnit === "years") {
-            return parseInt(post.age) <= 1;
-          } else {
-            return true; // Consider all if ageUnit is not "years" (e.g., weeks, months)
-          }
+            if (selectedSpecies === "3") {
+                return post.species.toLowerCase() !== "dog" && post.species.toLowerCase() !== "cat";
+            } else {
+                return post.species.toLowerCase() === mapSpeciesFilter(selectedSpecies).toLowerCase();
+            }
         });
-      case "2":
-        return posts.filter(post => {
-          if (post.ageUnit === "years") {
-            return parseInt(post.age) >= 2 && parseInt(post.age) <= 9;
-          } else {
-            return false; // Exclude posts with ageUnit other than "years"
-          }
-        });
-      case "3":
-        return posts.filter(post => {
-          if (post.ageUnit === "years") {
-            return parseInt(post.age) >= 10;
-          } else {
-            return false; // Exclude posts with ageUnit other than "years"
-          }
-        });
-      default:
-        return posts;
-    }
-  };
+    };
 
-  // Function to map species filter option to corresponding string
-  const mapSpeciesFilter = (selectedSpeciesOption) => {
-    switch (selectedSpeciesOption) {
-      case "1":
-        return "dog";
-      case "2":
-        return "cat";
-      case "3":
-        return "others";
-      default:
-        return "";
-    }
-  };
+    const mapSpeciesFilter = (selectedSpeciesOption) => {
+        switch (selectedSpeciesOption) {
+            case "1":
+                return "dog";
+            case "2":
+                return "cat";
+            case "3":
+                return "others";
+            default:
+                return "";
+        }
+    };
 
-  // Function to apply search term filter
-  const applySearchFilter = (posts) => {
-    if (searchTerm.trim() === "") {
-      return posts; // If no search term, return all posts
-    }
-    return posts.filter(post =>
-      post.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      post.species.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      post.breed.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      post.medicalCondition.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      post.behavioralIssues.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      post.reasonForRehoming.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-  };
+    const applyAgeFilter = (posts) => {
+        switch (selectedAgeRange) {
+            case "1":
+                return posts.filter(post => {
+                    if (post.ageUnit === "years") {
+                        return parseInt(post.age) <= 1;
+                    } else {
+                        return true;
+                    }
+                });
+            case "2":
+                return posts.filter(post => {
+                    if (post.ageUnit === "years") {
+                        return parseInt(post.age) >= 2 && parseInt(post.age) <= 9;
+                    } else {
+                        return false;
+                    }
+                });
+            case "3":
+                return posts.filter(post => {
+                    if (post.ageUnit === "years") {
+                        return parseInt(post.age) >= 10;
+                    } else {
+                        return false;
+                    }
+                });
+            default:
+                return posts;
+        }
+    };
 
-  // Pagination logic
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
+    const applySearchFilter = (posts) => {
+        if (searchTerm.trim() === "") return posts; // No search term
+        return posts.filter(post =>
+            post.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            post.species.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            post.breed.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            post.medicalCondition.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            post.behavioralIssues.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            post.reasonForRehoming.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+    };
 
-  // Handle page change
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
+    const handlePageChange = (pageNumber) => {
+        setCurrentPage(pageNumber);
 
-    // Scroll to the top of the page
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Scroll to the stored position
+        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
 
-    // Store current page and scroll position in local storage
-    localStorage.setItem('currentPage', pageNumber.toString());
-    localStorage.setItem('scrollPosition', '0'); // Set scroll position to top
-  };
+        // Store current page and scroll position in local storage
+        localStorage.setItem('currentPage', pageNumber.toString());
+        localStorage.setItem('scrollPosition', scrollPosition.toString());
+    };
 
-  // Handle click on pet card to navigate to petDetails
-  const navigateToPetDetails = (postId) => {
-    // Store current page and scroll position in local storage
-    localStorage.setItem('currentPage', currentPage.toString());
-    localStorage.setItem('scrollPosition', window.pageYOffset.toString());
-    navigate(`/availablePets/petDetails/${postId}`);
-  };
+    const navigateToPetDetails = (postId) => {
+        // Store current page and scroll position in local storage
+        localStorage.setItem('currentPage', currentPage.toString());
+        localStorage.setItem('scrollPosition', window.pageYOffset.toString());
+        navigate(`/availablePets/petDetails/${postId}`);
+    };
 
-  // Render the component
-  return (
-    <div className="petPosts-container">
-      <h2>Available Pets</h2>
-      <div className="filter">
-        <select name="species" id="species" onChange={(event) => setSelectedSpecies(event.target.value)}>
-          <option value="0">All Species</option>
-          <option value="1">Dogs</option>
-          <option value="2">Cats</option>
-          <option value="3">Others</option>
-        </select>
-        <select name="age" id="age" onChange={(event) => setSelectedAgeRange(event.target.value)}>
-          <option value="0">All Ages</option>
-          <option value="1">0-1 Years</option>
-          <option value="2">2-9 Years</option>
-          <option value="3">10+ Years</option>
-        </select>
-        <FilterBar setSearchTerm={setSearchTerm} />
-      </div>
-      <section className="pet-post">
-        {currentPosts.length === 0 ? (
-          <p>No posts found.</p>
-        ) : (
-          currentPosts.map(petPost => (
-            <div key={petPost.id} className="pet-card">
-              <header className="petPost-header">{petPost.name}</header>
-              <div><img src={petPost.photo} alt={petPost.name} className="pet-photo" onClick={() => navigateToPetDetails(petPost.id)} /></div>
+    // Calculate current posts for pagination
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
+
+    return (
+        <div className="petPosts-container">
+            <h2>Available Pets</h2>
+            <div className="filter">
+                <select name="species" id="species" onChange={(e) => setSelectedSpecies(e.target.value)}>
+                    <option value="0">All Species</option>
+                    <option value="1">Dogs</option>
+                    <option value="2">Cats</option>
+                    <option value="3">Others</option>
+                </select>
+                <select name="age" id="age" onChange={(e) => setSelectedAgeRange(e.target.value)}>
+                    <option value="0">All Ages</option>
+                    <option value="1">0-1 Years</option>
+                    <option value="2">2-9 Years</option>
+                    <option value="3">10+ Years</option>
+                </select>
+                <input
+                    type="text"
+                    placeholder="Search"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                />
             </div>
-          ))
-        )}
-      </section>
-      {/* Pagination */}
-      <ul className="pagination">
-        {Array.from({ length: Math.ceil(filteredPosts.length / postsPerPage) }, (_, i) => (
-          <li key={i + 1} className={`page-item ${currentPage === i + 1 ? 'active' : ''}`}>
-            <button onClick={() => handlePageChange(i + 1)} className="page-link">
-              {i + 1}
-            </button>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+            <section className="pet-post">
+                {currentPosts.length === 0 ? (
+                    <p>No posts found.</p>
+                ) : (
+                    currentPosts.map(petPost => (
+                        <div key={petPost.id} className="pet-card">
+                            <header className="petPost-header">{petPost.name}</header>
+                            <div>
+                                <img
+                                    src={petPost.photo}
+                                    alt={petPost.name}
+                                    className="pet-photo"
+                                    onClick={() => navigateToPetDetails(petPost.id)}
+                                />
+                            </div>
+                        </div>
+                    ))
+                )}
+            </section>
+            <ul className="pagination">
+                {Array.from({ length: Math.ceil(filteredPosts.length / postsPerPage) }, (_, i) => (
+                    <li key={i + 1} className={`page-item ${currentPage === i + 1 ? 'active' : ''}`}>
+                        <button onClick={() => handlePageChange(i + 1)} className="page-link">
+                            {i + 1}
+                        </button>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
 };
 
 export default PetPost;

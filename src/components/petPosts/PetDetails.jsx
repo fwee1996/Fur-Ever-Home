@@ -307,7 +307,7 @@ export const PetDetails = ({ currentUser }) => {
                 <img src={petDetails.photo} alt={petDetails.name} className="pet-details-photo" />
               </div>
               <div className='info'>
-                <div className="petDetails-info"><strong>Age:</strong> {petDetails.age}</div>
+                <div className="petDetails-info"><strong>Age:</strong> {petDetails.age} {petDetails.ageUnit}</div>
                 <div className="petDetails-info"><strong>Species:</strong> {petDetails.species}</div>
                 <div className="petDetails-info"><strong>Breed:</strong> {petDetails.breed}</div>
                 <div className="petDetails-info"><strong>Medical Condition:</strong> {petDetails.medicalCondition}</div>
