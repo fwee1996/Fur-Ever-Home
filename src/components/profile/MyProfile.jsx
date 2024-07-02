@@ -326,31 +326,40 @@ import { deleteUserProfile, getAllUsers } from "../../services/userService";
 import { useNavigate } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import './MyProfile.css'; // Import the CSS file
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenToSquare, faTrashAlt } from '@fortawesome/free-regular-svg-icons'; // Import FontAwesome icons
 
 export const MyProfile = ({ currentUser }) => {
   const [user, setUser] = useState({});
   const navigate = useNavigate();
 
   useEffect(() => {
-    getAllUsers().then((usersArray) => {
-      const userProfile = usersArray.find(user => user.id === currentUser.id);
-      setUser(userProfile);
-    });
+    // Fetch user profile details when currentUser.id changes
+    const fetchUserProfile = async () => {
+      try {
+        const usersArray = await getAllUsers();
+        const userProfile = usersArray.find(user => user.id === currentUser.id);
+        if (userProfile) {
+          setUser(userProfile);
+        }
+      } catch (error) {
+        console.error('Failed to fetch user profile:', error);
+      }
+    };
+
+    fetchUserProfile();
   }, [currentUser.id]);
 
-
-  // Handling Profile Deletion:
-  // When handleDeleteProfile is executed after confirming deletion, it removes the user's profile using deleteUserProfile(currentUser.id).
-  // Upon successful deletion, it alerts the user and clears the localStorage item (localStorage.removeItem("furEverHome_user")) to simulate a logout. This ensures that upon redirection to /login, the navigation bar in NavigationBar will show the appropriate links based on the absence of the furEverHome_user item in localStorage.
+  // Handle profile deletion
   const handleDeleteProfile = async () => {
     const confirmDelete = window.confirm('Are you sure you want to delete your profile?');
     if (confirmDelete) {
       try {
         await deleteUserProfile(currentUser.id);
         alert('Profile successfully deleted');
-        // Clear local storage to simulate logout
+        // Simulate logout by clearing local storage
         localStorage.removeItem("furEverHome_user");
-        navigate('/login'); // Redirect to login or another appropriate page
+        navigate('/login'); // Redirect to login page after deletion
       } catch (error) {
         console.error('Failed to delete profile', error);
         alert('Failed to delete profile');
@@ -373,10 +382,18 @@ export const MyProfile = ({ currentUser }) => {
           <p><strong>State:</strong> {user.state}</p>
         </div>
         <div className="profile-buttons">
-          <Button variant="warning" onClick={() => navigate(`/updateProfile/${currentUser.id}`)}>Update Profile</Button>
-          <Button variant="danger" onClick={handleDeleteProfile}>Delete Profile</Button>
+          {/* Button to navigate to update profile page */}
+          <Button variant="warning" onClick={() => navigate(`/updateProfile/${currentUser.id}`)} style={{ backgroundColor: 'rgb(163, 194, 159)', borderColor: 'rgb(132, 168, 128)' }}>
+            <FontAwesomeIcon icon={faPenToSquare} /> Update
+          </Button>
+          {/* Button to delete profile */}
+          <Button variant="danger" onClick={handleDeleteProfile}style={{ backgroundColor: 'rgb(189, 87, 87)', borderColor: 'rgb(145, 57, 57)' }}>
+            <FontAwesomeIcon icon={faTrashAlt} /> Delete
+          </Button>
         </div>
       </div>
     </div>
   );
 };
+
+export default MyProfile;

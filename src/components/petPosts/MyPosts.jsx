@@ -3,6 +3,9 @@ import { getAllPetPosts, deletePetPost } from '../../services/petPostService';
 import { useNavigate } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import "./MyPosts.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenToSquare, faTrashAlt } from '@fortawesome/free-regular-svg-icons';
+
 
 export const MyPosts = ({ currentUser }) => {
     const navigate = useNavigate(); 
@@ -62,8 +65,12 @@ export const MyPosts = ({ currentUser }) => {
                                 <p>Reason for Rehoming: {post.reasonForRehoming}</p>
                                 <p><small>Posted on: {new Date(post.timestamp).toLocaleDateString()}</small></p> {/* Fixed typo in timestamp */}
                                 <div className='button-group'>
-                                <Button variant="warning" onClick={() => navigate(`/updateMyPost/${post.id}`)}>Modify</Button>
-                                <Button variant="success" onClick={() => handleDelete(post)}>Delete</Button>
+                                <Button variant="success" onClick={() => navigate(`/updateMyPost/${post.id}`)} style={{ backgroundColor: 'rgb(195, 209, 189)', borderColor: '#ff69b4' }}><FontAwesomeIcon icon={faPenToSquare} /></Button>
+                                {/* <Button variant="success" onClick={() => handleDelete(post)}>Delete</Button> */}
+                                <Button variant="danger" onClick={() => handleDelete(post)} style={{ backgroundColor: ' rgb(218, 156, 137)', borderColor: '#ff69b4' }}>
+                                <FontAwesomeIcon icon={faTrashAlt} />
+                                </Button>
+
                                 </div>
                                 </div>
                                 </div>
@@ -78,3 +85,5 @@ export const MyPosts = ({ currentUser }) => {
 };
 
 export default MyPosts;
+
+

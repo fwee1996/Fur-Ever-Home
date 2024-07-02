@@ -209,7 +209,7 @@
       "email": "kristie@gmail.com",
       "city": "Derwood",
       "state": "Maryland",
-      "photo": "https://randomuser.me/api/portraits/women/7.jpg",
+      "photo": "https://www.boredpanda.com/blog/wp-content/uploads/2024/05/Kristie-Pereira-with-dog-Beau_4-664f0b513578d__700.jpg",
       "isOwner": true
     },
     {
@@ -374,12 +374,12 @@
     },
     {
       "id": 24,
-      "fullName": "Jennifer Green",
+      "fullName": "Kyle Green",
       "phoneNumber": "3151239911",
-      "email": "jennifer@gmail.com",
+      "email": "kyle@gmail.com",
       "city": "Durham",
       "state": "North Carolina",
-      "photo": "https://randomuser.me/api/portraits/women/24.jpg",
+      "photo": "https://www.usatoday.com/gcdn/presto/2020/09/25/USAT/f4d10bd0-7f11-413f-9d69-c67d8e7d7f03-Arif_Zahir.jpg?width=660&height=660&fit=crop&format=pjpg&auto=webp",
       "isOwner": true
     },
     {
@@ -1358,7 +1358,7 @@
     {
       "id": 40,
       "name": "Olivia Benson",
-      "age": "5",
+      "age": "10",
       "species": "cat",
       "breed": "Scottish Fold",
       "medicalCondition": "none",
