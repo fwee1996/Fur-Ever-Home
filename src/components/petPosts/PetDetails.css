@@ -32,14 +32,7 @@
   }
 } */
 
-.pet-details-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  /* padding: 20px; */
-  
-}
+
 
 
 .petDetails-container h2{
@@ -156,12 +149,18 @@ margin-bottom: 20px;
 } */
 
 .pet-details-card {
+  width: 800px; /* Adjust card width based on desired layout */
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   /* padding: 20px; */
-  
+  background-color: rgba(255, 248, 240, 0.95);
+  border-radius: 10px; /* Rounded corners for the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Soft shadow */
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 80px;
 }
 
 
@@ -187,6 +186,9 @@ margin: 0 auto;
   /* Maintain aspect ratio and cover container: cuts the picture to size rather than squishing it*/
   object-fit: cover; 
   margin-top: 30px; /* Top margin for spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Soft shadow */
+  
+  
 }
 
 .pet-details-photo:hover {
@@ -198,6 +200,7 @@ margin: 0 auto;
   /* margin-bottom: 5px; */
   text-align: start;
   margin-top: 30px;
+  margin-left: 30px;
 }
 
 .petPost-header {
@@ -230,3 +233,9 @@ margin: 0 auto;
 .petDetails-info{
   margin-bottom: 10px;
 } 
+
+
+.pet-details-card h2{
+  margin-top: 25px;
+  margin-bottom: 5px;
+}

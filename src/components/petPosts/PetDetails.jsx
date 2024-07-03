@@ -300,8 +300,9 @@ export const PetDetails = ({ currentUser }) => {
     <div className='main-container'>
       <div className="petDetails-container">
         <section className="pet-Details-Post">
-          <h2>{petDetails.name}'s Details</h2>
+          {/* <h2>{petDetails.name}'s Details</h2> */}
           <div key={petDetails.id} className="pet-details-card">
+          <h2>{petDetails.name}'s Details</h2>
             <div className="photo-and-info">
               <div>
                 <img src={petDetails.photo} alt={petDetails.name} className="pet-details-photo" />

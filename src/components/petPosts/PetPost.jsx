@@ -1513,7 +1513,7 @@ export const PetPost = () => {
             </div>
             <section className="pet-post">
                 {currentPosts.length === 0 ? (
-                    <p>No posts found.</p>
+                    <p>No posts found :(</p>
                 ) : (
                     currentPosts.map(petPost => (
                         <div key={petPost.id} className="pet-card">

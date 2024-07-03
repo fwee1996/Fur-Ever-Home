@@ -76,7 +76,7 @@ export const MyPosts = ({ currentUser }) => {
                                 </div>
                             </div>
                             
-                        )) : <p>No posts found. </p>}
+                        )) : <p>No posts found :( </p>}
                     </article>
                 </div>
             </div>
