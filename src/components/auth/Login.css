@@ -1,4 +1,3 @@
-/* General styling for the login container */
 .container-login {
   text-align: center;
   height: 100vh;
@@ -8,7 +7,6 @@
   margin-top: 100px; /* Adjusted margin from the top */
   
 }
-
 
 /* Styling for the "Not a member yet?" link */
 .container-login > section > a {
@@ -28,14 +26,13 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 
-/* Styling for the logo image within the form */
+/* Styling for the logo image */
 .form-login img {
   margin-top:10px;
   width: 500px; /* Width of the logo image */
   height: 100px; /* Height of the logo image */
 }
 
-/* Styling for headings within the form */
 .form-login h2 {
   font-size: 1.5rem; /* Font size for secondary headings */
   margin-top: 20px; /* Adds spacing above the heading */
@@ -46,7 +43,6 @@
   margin-top: 20px; /* Adds spacing above the section */
 }
 
-/* Additional styling for the login form */
 form {
   font-family: 'Playwrite IT Moderna', sans-serif; /* Font family for form text */
   max-width: 40%; /* Maximum width of the form */
@@ -58,7 +54,6 @@ form {
   text-align: left; /* Left aligns text content within the form */
 }
 
-/* Styling for fieldsets within the form */
 fieldset {
   min-width: 0; /* Ensures fieldsets can shrink */
   padding-bottom: 1.5rem; /* Padding below fieldsets */
@@ -75,14 +70,12 @@ fieldset {
   border-radius: 0.25rem; /* Border radius of form controls */
 }
 
-/* Styling for form groups */
 .form-group {
   margin-right: 1rem; /* Right margin for form groups */
   display: flex; /* Enables flexbox layout for form groups */
   flex-direction: column; /* Stacks form group elements vertically */
 }
 
-/* Additional styling for form buttons */
 .form-btn {
   align-self: flex-end; /* Aligns form buttons to the end of their container */
 }
