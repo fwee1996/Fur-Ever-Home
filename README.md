@@ -1,4 +1,4 @@
-## Overview
+![image](https://github.com/user-attachments/assets/ec38f0ba-6dfd-45d5-8fb7-5f1fed424975)## Overview
 <p align="center">
   <img src="https://github.com/user-attachments/assets/aff4c6cf-3af2-489b-a258-ea61182c4073" width="300">
 <!--   &nbsp;&nbsp;&nbsp;&nbsp; -->
@@ -36,7 +36,7 @@ When users click on a pet post, they are taken to the pet details page, which pr
 ## User Authentication
 Register
 ***
-![image](https://github.com/user-attachments/assets/e825b104-c221-41bf-80ba-232251858958)
+![image](https://github.com/user-attachments/assets/9da5cace-ebdc-41bc-9a04-6a3de45c2561)
 
 Login
 ***
