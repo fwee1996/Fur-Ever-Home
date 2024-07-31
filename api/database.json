@@ -1427,6 +1427,20 @@
         }
       ],
       "ageUnit": "years"
+    },
+    {
+      "name": "Daisy",
+      "age": "4",
+      "ageUnit": "years",
+      "species": "Dog",
+      "breed": "Pug",
+      "medicalCondition": "None",
+      "behavioralIssues": "None",
+      "reasonForRehoming": "Owner died :(",
+      "photo": "https://res.cloudinary.com/fwee1996/image/upload/v1722396775/fi4kvgemjan8bswjrpvh.jpg",
+      "ownerId": 34,
+      "timestamp": "2024-07-31T03:32:57.674Z",
+      "id": 43
     }
   ],
   "ownersPets": [

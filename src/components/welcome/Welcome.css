@@ -54,7 +54,6 @@
     font-weight: bold;
   }
 
-  /* This targets any div that is a child of an element with the .welcome-container class */
   .welcome-container > div {
     font-style: italic;
   }
