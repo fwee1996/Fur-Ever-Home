@@ -33,6 +33,6 @@ Users need to log in or register to see the contact information of pet owners an
 The "Post a Pet" feature allows users to create detailed listings for their pets. Pet owners fill out a form with comprehensive information about their pets and can upload a picture that will be featured in the post.
 
 ## Profile
-![image](https://github.com/user-attachments/assets/7fff6e92-7f52-4d3a-ad08-4915e85632be)
+![image](https://github.com/user-attachments/assets/f454045e-7e7f-4a8d-9697-d31332a47984)
 
 Profile pages contain contact information to ensure effective communication between interested adopters and pet owners. Users can view, edit, or delete their profiles to keep information up to date for effective communication.
