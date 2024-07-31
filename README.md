@@ -19,7 +19,10 @@ https://youtu.be/oeRWVcQH3b0
 4. In a seperate gitbash window, navigate to the API folder and run `json-server database.json -p 8088 -w`<br>
 5. In the root folder start the app by running `npm run dev`
 
-## Homepage
+## Welcome Page
+![image](https://github.com/user-attachments/assets/61a2d147-f3c4-4e37-8bb8-31b3094b7501)
+![image](https://github.com/user-attachments/assets/abc37e7e-d373-4a8d-93c3-1a999695cf4d)
+![image](https://github.com/user-attachments/assets/a1c86696-1fe7-49c7-823a-7a1f1fcd8112)
 
 
 ## Pet Posts
@@ -48,12 +51,12 @@ Users need to log in or register to see the contact information of pet owners an
 
 The "Post a Pet" feature allows users to create detailed listings for their pets. Pet owners fill out a form with comprehensive information about their pets and can upload a picture that will be featured in the post. 
 
+## My Posts
 ![image](https://github.com/user-attachments/assets/6d61a46b-26bc-4100-9513-c09ab914c2cf)
 
 Users can view, edit, or delete their pet posts to keep their listings up to date.
 
 ## Profile
-![image](https://github.com/user-attachments/assets/713f376b-386c-4fdb-92c1-ad1a4be16fb7)
-
+![image](https://github.com/user-attachments/assets/86d9c9f7-8dc2-475c-86c5-0eb48d85856b)
 
 Profile pages contain contact information to ensure effective communication between interested adopters and pet owners. Users can view, edit, or delete their profiles to keep information up to date for effective communication.
