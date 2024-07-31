@@ -20,6 +20,9 @@ https://youtu.be/oeRWVcQH3b0
 ## Welcome Page
 ![image](https://github.com/user-attachments/assets/a1c86696-1fe7-49c7-823a-7a1f1fcd8112)
 
+## Dropdown/ Side Navigation
+![image](https://github.com/user-attachments/assets/13c5e06a-90e1-48af-aa2f-558d50e86882)
+
 ## Pet Posts
 ![image](https://github.com/user-attachments/assets/e4a27cb1-f801-4ba1-af84-c84bfd58c3ea)
 
