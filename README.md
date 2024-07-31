@@ -19,7 +19,6 @@ https://youtu.be/oeRWVcQH3b0
 4. In a seperate gitbash window, navigate to the API folder and run `json-server database.json -p 8088 -w`<br>
 5. In the root folder start the app by running `npm run dev`
 
-## Walkthrough
 ## Homepage
 
 
