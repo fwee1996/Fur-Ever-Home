@@ -30,6 +30,7 @@ On the available pets page, users can browse through the list of pet postings. U
 
 ## Pet Details
 ![image](https://github.com/user-attachments/assets/55748fae-152a-44df-93fe-2b3123170abe)
+![image](https://github.com/user-attachments/assets/92db92eb-bd6a-498a-9818-426a86ccce13)
 
 When users click on a pet post, they are taken to the pet details page, which provides key information for each pet, such as their age, species, breed, behavioral issues, medical condition, and reason for rehoming. Each pet listing is connected to the owner's profile, featuring a "Contact Owner" button for direct communication.
 
