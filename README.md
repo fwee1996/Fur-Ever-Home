@@ -31,6 +31,8 @@ Users need to log in or register to see the contact information of pet owners an
 ![image](https://github.com/user-attachments/assets/8bf822dc-ea1e-402c-a8e9-1845fd9ff243)
 
 The "Post a Pet" feature allows users to create detailed listings for their pets. Pet owners fill out a form with comprehensive information about their pets and can upload a picture that will be featured in the post.
+![image](https://github.com/user-attachments/assets/cff9b277-8e22-49f6-b5ec-1da8b0c1cd0a)
+
 
 ## Profile
 ![image](https://github.com/user-attachments/assets/f454045e-7e7f-4a8d-9697-d31332a47984)
