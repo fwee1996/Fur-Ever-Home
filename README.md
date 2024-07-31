@@ -13,11 +13,11 @@ Are you or someone you know struggling with a pet and considering sending them b
 https://youtu.be/oeRWVcQH3b0
 
 ## Installation 
-Clone down the repository<br>
-In the root of the folder of the project run `npm install`
-Install JSON-Server by running `npm i json-server`
-In a seperate gitbash window, navigate to the API folder and run `json-server database.json -p 8088 -w`
-In the root folder start the app by running `npm run dev`
+1. Clone down the repository<br>
+2. In the root of the folder of the project run `npm install`<br>
+3. Install JSON-Server by running `npm i json-server`<br>
+4. In a seperate gitbash window, navigate to the API folder and run `json-server database.json -p 8088 -w`<br>
+5. In the root folder start the app by running `npm run dev`
 
 ## Walkthrough
 ## Homepage
