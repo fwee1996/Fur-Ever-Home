@@ -18,10 +18,7 @@ https://youtu.be/oeRWVcQH3b0
 5. In the root folder start the app by running `npm run dev`
 
 ## Welcome Page
-![image](https://github.com/user-attachments/assets/61a2d147-f3c4-4e37-8bb8-31b3094b7501)
-![image](https://github.com/user-attachments/assets/abc37e7e-d373-4a8d-93c3-1a999695cf4d)
 ![image](https://github.com/user-attachments/assets/a1c86696-1fe7-49c7-823a-7a1f1fcd8112)
-
 
 ## Pet Posts
 ![image](https://github.com/user-attachments/assets/e4a27cb1-f801-4ba1-af84-c84bfd58c3ea)
