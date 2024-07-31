@@ -3,7 +3,7 @@
   <img src="https://github.com/user-attachments/assets/aff4c6cf-3af2-489b-a258-ea61182c4073" width="300">
   &nbsp;&nbsp;&nbsp;&nbsp;
   <br>
-  <img src="https://github.com/fwee1996/Fur-Ever-Home/blob/fw7/images/Logo1.png?raw=true" width="400">
+  <img src="https://github.com/fwee1996/Fur-Ever-Home/blob/fw7/images/Logo1.png?raw=true" width="300">
 </p>
 
 
