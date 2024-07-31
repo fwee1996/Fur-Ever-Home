@@ -1,10 +1,7 @@
+<img src="https://github.com/fwee1996/Fur-Ever-Home/blob/fw7/images/Logo1.png?raw=true" width="300">
+
 ## Overview
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/aff4c6cf-3af2-489b-a258-ea61182c4073" width="300">
-<!--   &nbsp;&nbsp;&nbsp;&nbsp; -->
-  <br>
-  <img src="https://github.com/fwee1996/Fur-Ever-Home/blob/fw7/images/Logo1.png?raw=true" width="300">
-</p>
+<img src="https://github.com/user-attachments/assets/aff4c6cf-3af2-489b-a258-ea61182c4073" width="300">
 
 
 Are you or someone you know struggling with a pet and considering sending them back to the shelter? Instead of contributing to the overcrowding of local shelters or humane societies, consider Fur-Ever-Home as a compassionate alternative. Fur-Ever-Home is a user-friendly and transparent platform that connects pet owners with interested and experienced adopters who can provide the care these pets need. Owners can create, view, edit, and delete pet listings, while adopters can browse available pets, gain comprehensive information, and directly contact owners.
