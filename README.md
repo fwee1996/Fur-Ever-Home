@@ -5,7 +5,7 @@
   <br>
   <img src="https://github.com/fwee1996/Fur-Ever-Home/blob/fw7/images/Logo1.png?raw=true" width="300">
 </p>
-`code`
+
 
 Are you or someone you know struggling with a pet and considering sending them back to the shelter? Instead of contributing to the overcrowding of local shelters or humane societies, consider Fur-Ever-Home as a compassionate alternative. Fur-Ever-Home is a user-friendly and transparent platform that connects pet owners with interested and experienced adopters who can provide the care these pets need. Owners can create, view, edit, and delete pet listings, while adopters can browse available pets, gain comprehensive information, and directly contact owners.
 
@@ -14,10 +14,10 @@ https://youtu.be/oeRWVcQH3b0
 
 ## Installation 
 Clone down the repository
-In the root of the folder of the project run 'npm install'
-Install JSON-Server by running 'npm i json-server'
-In a seperate gitbash window, navigate to the API folder and run 'json-server database.json -p 8088 -w'
-In the root folder start the app by running 'npm run dev'
+In the root of the folder of the project run `npm install`
+Install JSON-Server by running `npm i json-server`
+In a seperate gitbash window, navigate to the API folder and run `json-server database.json -p 8088 -w`
+In the root folder start the app by running `npm run dev`
 
 ## Walkthrough
 ## Homepage
