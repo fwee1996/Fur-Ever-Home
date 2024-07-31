@@ -36,7 +36,7 @@ When users click on a pet post, they are taken to the pet details page, which pr
 ## User Authentication
 Register
 ***
-![image](https://github.com/user-attachments/assets/9da5cace-ebdc-41bc-9a04-6a3de45c2561)
+![image](https://github.com/user-attachments/assets/e2600d5d-67b4-4422-a170-d061e2f6f192)
 
 Login
 ***
