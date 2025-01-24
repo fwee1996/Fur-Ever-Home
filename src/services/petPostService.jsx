@@ -9,14 +9,27 @@ import axios from 'axios'; //create a post fn
 export const getAllPetPosts = async () => {
   try {
     const response = await fetch('/database.json'); // Reference the file in the public folder
+
+    // Check if the fetch was successful
     if (!response.ok) {
       throw new Error('Failed to fetch pet posts');
     }
-    const data = await response.json();
-    return data.PetPosts; // Assuming your data is in the "PetPosts" array in the database.json
+
+    const data = await response.json(); // Parse the JSON response
+
+    // Log the fetched data for inspection
+    console.log("Fetched data:", data);
+
+    // Check if 'PetPosts' exists and return it
+    if (data.PetPosts) {
+      return data.PetPosts;
+    } else {
+      throw new Error('PetPosts not found in the database');
+    }
   } catch (error) {
     console.error('Error fetching pet posts:', error);
-    throw error;
+    alert('Failed to fetch pet posts. Please try again.');
+    throw error; // Re-throw error so it can be handled elsewhere if necessary
   }
 };
 
