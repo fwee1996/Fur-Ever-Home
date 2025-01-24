@@ -1,9 +1,32 @@
 import axios from 'axios'; //create a post fn
 
-export const getAllPetPosts=()=>{
-    return fetch(`http://localhost:8088/PetPosts?_embed=ownersPets
-    `).then((res)=>res.json())//get a response, make it readable //embed part get info on ownerPetPosts
-}
+// export const getAllPetPosts=()=>{
+//     return fetch(`http://localhost:8088/PetPosts?_embed=ownersPets
+//     `).then((res)=>res.json())//get a response, make it readable //embed part get info on ownerPetPosts
+// }
+
+
+export const getAllPetPosts = async () => {
+  try {
+    const response = await fetch('/database.json'); // Reference the file in the public folder
+    if (!response.ok) {
+      throw new Error('Failed to fetch pet posts');
+    }
+    const data = await response.json();
+    return data.PetPosts; // Assuming your data is in the "PetPosts" array in the database.json
+  } catch (error) {
+    console.error('Error fetching pet posts:', error);
+    throw error;
+  }
+};
+
+
+
+
+
+
+
+
 // //so can get owner id, but you want owner name it is in user object /table! user id in owner table
 // //so look at service petPost , then loom at owner id and compare 
 // //EMBED is if the thing you want is FK on something else, expand is if you have foreign key for something to somewhere else
